@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GroundLM 2026 | EMNLP 2026 Workshop</title>
+  <meta name="description" content="Grounding Language Models — Learning Faithfully and Efficiently. A workshop at EMNLP 2026.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--
+    ┌─────────────────────────────────────────────────────┐
+    │  DATA / CONFIG                                      │
+    │  Edit data/config.js to update:                    │
+    │   • Site name, dates, email, URLs                  │
+    │   • Speakers, Organizers, Program, Topics, FAQ     │
+    └─────────────────────────────────────────────────────┘
+  -->
+  <script src="data/config.js"></script>
+</head>
+<body>
+
+  <!--
+    ════════════════════════════════════════════════════
+    SECTION FILES  (edit each in sections/)
+    ════════════════════════════════════════════════════
+    announcement.html  → top banner bar
+    header.html        → sticky nav
+    hero.html          → hero / landing
+    glance.html        → "At a Glance" 3-column cards
+    topics.html        → Topics of Interest grid
+    cfp.html           → Call for Papers
+    dates.html         → Important Dates table
+    speakers.html      → Invited Speakers cards
+    organizers.html    → Organizer cards
+    program.html       → Workshop schedule
+    venue.html         → Venue + map placeholder
+    faq.html           → Accordion FAQ
+    footer.html        → Footer
+    ════════════════════════════════════════════════════
+  -->
+
+  <!-- ① Announcement bar -->
+  <div class="ann-bar" id="ann-bar"></div>
+
+  <!-- ② Sticky header -->
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="#">
+        <span class="logo-name">GroundLM 2026</span>
+        <span class="logo-sub">EMNLP 2026 Workshop</span>
+      </a>
+      <nav id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#cfp">CFP</a>
+        <a href="#dates">Dates</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#program">Program</a>
+        <a href="#venue">Venue</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ③ Hero -->
+  <div class="hero" id="home">
+    <div class="hero-inner" id="hero-content"></div>
+  </div>
+
+  <!-- ④ Page body — all sections -->
+  <div class="page-body">
+
+    <!-- At a Glance -->
+    <section id="glance">
+      <div class="section-header">
+        <div class="section-label">Overview</div>
+        <h2>At a Glance</h2>
+      </div>
+      <div class="glance-grid">
+        <div class="glance-card">
+          <h3>Why submit?</h3>
+          <ul>
+            <li>Reach a multidisciplinary audience spanning NLP, ML, and IR communities.</li>
+            <li>Publish archival proceedings papers or present non-archival work for community discussion.</li>
+            <li>Showcase new benchmarks, datasets, systems, and lessons learned — including negative results.</li>
+            <li>Interact with leading researchers tackling faithfulness and grounding challenges.</li>
+          </ul>
+        </div>
+        <div class="glance-card">
+          <h3>Who should submit?</h3>
+          <ul>
+            <li>Students, researchers, and practitioners in NLP, IR, and ML.</li>
+            <li>Work on retrieval-augmented generation, knowledge grounding, factuality, and hallucination.</li>
+            <li>Efficient training, adaptation, and inference methods for grounded LLMs.</li>
+            <li>Evaluation frameworks and benchmarks for grounding and faithfulness.</li>
+          </ul>
+        </div>
+        <div class="glance-card">
+          <h3>Workshop format</h3>
+          <ul>
+            <li>Full-day workshop with invited keynote talks.</li>
+            <li>Panel discussion on open challenges in grounding.</li>
+            <li>Contributed oral presentations and poster session.</li>
+            <li>Student mentoring and networking session.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section id="topics">
+      <div class="section-header">
+        <div class="section-label">Scope</div>
+        <h2>Topics of Interest</h2>
+      </div>
+      <div class="topics-grid" id="topics-list"></div>
+    </section>
+
+    <!-- CFP -->
+    <section id="cfp">
+      <div class="section-header">
+        <div class="section-label">Submissions</div>
+        <h2>Call for Papers</h2>
+      </div>
+      <div class="cfp-body">
+        <p>
+          We invite submissions of original research on all aspects of grounding in language models,
+          with a particular emphasis on faithfulness, efficiency, and real-world reliability.
+          We welcome both archival papers (to appear in proceedings) and non-archival extended abstracts.
+        </p>
+        <h3>Paper Types</h3>
+        <ul>
+          <li><strong>Long papers (archival):</strong> Up to 8 pages of content, unlimited references. Will appear in ACL Anthology proceedings.</li>
+          <li><strong>Short papers (archival):</strong> Up to 4 pages of content, unlimited references. Will appear in ACL Anthology proceedings.</li>
+          <li><strong>Extended abstracts (non-archival):</strong> Up to 2 pages. For work in progress or already published elsewhere.</li>
+          <li>All accepted archival and non-archival papers are eligible for oral or poster presentation.</li>
+        </ul>
+        <h3>Submission Instructions</h3>
+        <ul>
+          <li>All submissions must follow the EMNLP 2026 style guidelines and be anonymized for double-blind review.</li>
+          <li>Submit via OpenReview (link coming soon).</li>
+          <li>Reviewing is double-blind. Author names and affiliations must be omitted.</li>
+          <li>Submissions must not be under review at other venues for the duration of the review period.</li>
+          <li>We follow the <a href="#">ACL Code of Ethics</a>. Authors are expected to attest to the ethical considerations in their work.</li>
+        </ul>
+        <h3>Dual Submission &amp; Preprints</h3>
+        <p>
+          Non-archival submissions may overlap with previously published or concurrently submitted work.
+          Preprints may be posted publicly at any time without violating the anonymity policy.
+        </p>
+        <h3>Best Paper Award</h3>
+        <p>
+          Outstanding submissions will be recognized with a Best Paper Award, selected by the program committee.
+          We particularly encourage strong empirical work, novel theoretical contributions, and resource papers.
+        </p>
+        <div style="margin-top:24px;">
+          <a href="#" data-openreview-url class="btn btn-primary">Submit on OpenReview →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dates -->
+    <section id="dates">
+      <div class="section-header">
+        <div class="section-label">Timeline</div>
+        <h2>Important Dates</h2>
+      </div>
+      <p class="note" style="margin-bottom:20px;">
+        All deadlines are end-of-day in <strong>Anywhere on Earth (AoE)</strong> time.
+      </p>
+      <table class="dates-table">
+        <thead>
+          <tr><th>Event</th><th>Date</th></tr>
+        </thead>
+        <tbody id="dates-body"></tbody>
+      </table>
+      <p class="note mt-sm">
+        Exact workshop date will be confirmed upon finalization of the EMNLP 2026 schedule.
+      </p>
+    </section>
+
+    <!-- Speakers -->
+    <section id="speakers">
+      <div class="section-header">
+        <div class="section-label">Keynotes</div>
+        <h2>Invited Speakers</h2>
+      </div>
+      <div class="speakers-grid" id="speakers-grid"></div>
+      <p class="note mt-sm">More speakers to be announced. Check back soon.</p>
+    </section>
+
+    <!-- Organizers -->
+    <section id="organizers">
+      <div class="section-header">
+        <div class="section-label">Team</div>
+        <h2>Organizers</h2>
+      </div>
+      <div class="organizers-grid" id="organizers-grid"></div>
+      <p class="note mt-sm">
+        Questions? Contact us at
+        <a href="#" data-email style="color:var(--accent)">groundlm2026@googlegroups.com</a>
+      </p>
+    </section>
+
+    <!-- Program -->
+    <section id="program">
+      <div class="section-header">
+        <div class="section-label">Schedule</div>
+        <h2>Program</h2>
+      </div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:28px;max-width:620px;">
+        The detailed program will be available after acceptance notifications (June 2026).
+        The schedule below is a tentative outline.
+      </p>
+      <div>
+        <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border);">
+          Workshop Day — November 2026 (TBD)
+        </h3>
+        <div class="program-table" id="program-rows"></div>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section id="venue">
+      <div class="section-header">
+        <div class="section-label">Location</div>
+        <h2>Venue</h2>
+      </div>
+      <div class="venue-grid">
+        <div class="venue-info">
+          <h3>EMNLP 2026</h3>
+          <p>
+            GroundLM 2026 is co-located with <strong>EMNLP 2026</strong>.
+            The venue and exact location will be announced by the EMNLP 2026 organizing committee.
+          </p>
+          <p>
+            EMNLP (Empirical Methods in Natural Language Processing) is one of the premier annual
+            conferences in NLP. The 2026 edition will take place in November 2026. Details to follow.
+          </p>
+          <p>
+            For travel and accommodation information, please refer to the
+            <a href="#" data-emnlp-url>EMNLP 2026 website</a> once it becomes available.
+          </p>
+          <h3 style="margin-top:20px;">Accessibility</h3>
+          <p>
+            We are committed to making GroundLM 2026 accessible and inclusive.
+            Please <a href="#" data-email>contact us</a> if you have specific accessibility needs.
+          </p>
+        </div>
+        <div class="venue-map">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+          </svg>
+          <span>Venue TBD — EMNLP 2026</span>
+          <span style="color:#8090b0;font-size:0.7rem;">November 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-header">
+        <div class="section-label">Questions</div>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list" id="faq-list"></div>
+    </section>
+
+  </div><!-- /page-body -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-name" style="font-family:'Source Serif 4',serif;">GroundLM 2026</div>
+        <div class="logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;color:#5a6a88;">EMNLP 2026 Workshop</div>
+        <p>Grounding Language Models: Learning Faithfully and Efficiently.</p>
+        <p style="margin-top:8px;">Contact: <a href="#" data-email style="color:#6a8ab8;text-decoration:none;"></a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#dates">Important Dates</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#" data-openreview-url>OpenReview Submission</a></li>
+          <li><a href="#" data-emnlp-url>EMNLP 2026</a></li>
+          <li><a href="https://aclanthology.org/">ACL Anthology</a></li>
+        </ul>
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="https://www.aclweb.org/adminwiki/index.php?title=Anti-Harassment_Policy">ACL Anti-Harassment Policy</a></li>
+          <li><a href="https://www.aclweb.org/portal/content/code-ethics">ACL Code of Ethics</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GroundLM Workshop Organizers</span>
+      <span>Co-located with <a href="#" data-emnlp-url>EMNLP 2026</a></span>
+    </div>
+  </footer>
+
+  <!-- Main JS (must come after config.js) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
