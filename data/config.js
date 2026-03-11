@@ -68,12 +68,12 @@ const SPEAKERS = [
  * photo: path to image, or null to show initials
  */
 const ORGANIZERS = [
-  { name: "Yimu Wang", affiliation: "University of Waterloo", url: "#", photo: null },
-  { name: "Yee Man Choi", affiliation: "University of Waterloo", url: "#", photo: null },
-  { name: "Di Wu", affiliation: "University of Amsterdam", url: "#", photo: null },
-  { name: "Siqi Ouyang", affiliation: "Carnegie Mellon University", url: "#", photo: null },
-  { name: "Mozhgan Nasr Azadani", affiliation: "University of Waterloo", url: "#", photo: null },
-  { name: "Yi R. (May) Fung", affiliation: "Hong Kong University of Science and Technology", url: "#", photo: null },
+  { name: "Yimu Wang", affiliation: "University of Waterloo", url: "https://yimuwangcs.github.io/", photo: null },
+  { name: "Yee Man Choi", affiliation: "University of Waterloo", url: "https://kathcym.github.io/", photo: null },
+  { name: "Di Wu", affiliation: "University of Amsterdam", url: "https://moore3930.github.io/", photo: null },
+  { name: "Siqi Ouyang", affiliation: "Carnegie Mellon University", url: "https://owaski.github.io/", photo: null },
+  { name: "Mozhgan Nasr Azadani", affiliation: "University of Waterloo", url: "https://mozhgan91.github.io/", photo: null },
+  { name: "Yi R. (May) Fung", affiliation: "Hong Kong University of Science and Technology", url: "https://mayrfung.github.io/", photo: null },
 ];
 
 /**
