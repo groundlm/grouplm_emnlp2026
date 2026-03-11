@@ -45,37 +45,22 @@ const DATES = [
  */
 const SPEAKERS = [
   {
-    name: "Speaker Name",
-    affiliation: "University / Organization, Country",
+    name: "Freda Shi",
+    affiliation: "University of Waterloo, Vector Institute",
     status: "confirmed",
     bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
-    url: "#",
+    url: "https://cs.uwaterloo.ca/~fhs/",
     photo: null,
   },
   {
-    name: "Speaker Name",
-    affiliation: "University / Organization, Country",
+    name: "Lei Li",
+    affiliation: "Carnegie Mellon University",
     status: "confirmed",
     bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
-    url: "#",
+    url: "https://lileicc.github.io/",
     photo: null,
   },
-  {
-    name: "Speaker Name",
-    affiliation: "University / Organization, Country",
-    status: "tba",
-    bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
-    url: "#",
-    photo: null,
-  },
-  {
-    name: "Speaker Name",
-    affiliation: "University / Organization, Country",
-    status: "tba",
-    bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
-    url: "#",
-    photo: null,
-  },
+
 ];
 
 /**
@@ -83,11 +68,12 @@ const SPEAKERS = [
  * photo: path to image, or null to show initials
  */
 const ORGANIZERS = [
-  { name: "Organizer Name", affiliation: "University, Country", url: "#", photo: null },
-  { name: "Organizer Name", affiliation: "University, Country", url: "#", photo: null },
-  { name: "Organizer Name", affiliation: "University, Country", url: "#", photo: null },
-  { name: "Organizer Name", affiliation: "University, Country", url: "#", photo: null },
-  { name: "Organizer Name", affiliation: "University, Country", url: "#", photo: null },
+  { name: "Yimu Wang", affiliation: "University of Waterloo", url: "#", photo: null },
+  { name: "Yee Man Choi", affiliation: "University of Waterloo", url: "#", photo: null },
+  { name: "Di Wu", affiliation: "University of Amsterdam", url: "#", photo: null },
+  { name: "Siqi Ouyang", affiliation: "Carnegie Mellon University", url: "#", photo: null },
+  { name: "Mozhgan Nasr Azadani", affiliation: "University of Waterloo", url: "#", photo: null },
+  { name: "Yi R. (May) Fung", affiliation: "Hong Kong University of Science and Technology", url: "#", photo: null },
 ];
 
 /**
@@ -114,18 +100,14 @@ const PROGRAM = [
  * Topics of interest. Plain strings.
  */
 const TOPICS = [
-  "Retrieval-augmented generation (RAG): architectures, training, and evaluation.",
-  "Knowledge grounding: incorporating structured and unstructured knowledge into LLMs.",
-  "Hallucination detection, mitigation, and faithful generation.",
-  "Efficient fine-tuning and adaptation for grounded language understanding.",
-  "Grounding in multimodal settings: vision-language models and beyond.",
-  "Attribution, citation, and source verification in generated text.",
-  "Benchmarking and evaluation of factuality, faithfulness, and groundedness.",
-  "Parameter-efficient learning for knowledge-intensive tasks.",
-  "Entity linking, coreference resolution, and world knowledge integration.",
-  "Applications in healthcare, science, law, and enterprise settings.",
-  "Robustness, reliability, and calibration of grounded LLM systems.",
-  "Data-centric approaches: annotation, augmentation, and quality for grounding.",
+  "Efficient grounding: data-, feedback-, and compute-efficient methods; scaling strategies (merging, ensembles); parameter-efficient adaptation (PEFT, LoRA, prompt tuning)",
+  "Faithful grounding: reducing hallucinations; attribution and verifiability; probing and diagnostics; implicit vs.\ explicit grounding",
+  "Grounding mechanisms beyond text: retrieval and external knowledge; interaction, feedback, and outcomes; multimodal perception; action and embodiment",
+  "Evaluation: benchmarks, metrics, and protocols for multimodal and interactive grounding",
+  "Safety and reliability: robustness, privacy, and bias mitigation for grounded systems that connect to tools, sensors, or external data",
+  "Low-resource and multilingual grounding: domain adaptation; support for underrepresented languages and communities",
+  "Applications: domain-specific grounded systems (e.g., retrieval QA, education, healthcare, robotics, tool use)",
+  "Open problems: long-horizon grounded reasoning and distribution shift; negative results, failure cases, and limitations",
 ];
 
 /**
@@ -134,11 +116,11 @@ const TOPICS = [
 const FAQ = [
   {
     q: "Can I submit work that is under review elsewhere?",
-    a: "For archival submissions, the work must not be under review at any other venue during the GroundLM review period. For non-archival extended abstracts, concurrent submission to other venues is allowed.",
+    a: "For archival submissions, the work must not be under review at any other venue during the GroundLM review period. For non-archival submissions, concurrent submission to other venues is allowed.",
   },
   {
     q: "Can I submit work that has already been published?",
-    a: "Previously published work may be submitted as a non-archival extended abstract (up to 2 pages). It will not appear in the proceedings but may be presented as a poster or talk. Please indicate prior publication clearly in your submission.",
+    a: "Previously published work may be submitted as a non-archival submission. It will not appear in the proceedings but may be presented as a poster or talk. Please indicate prior publication clearly in your submission.",
   },
   {
     q: "Is there a preprint policy?",
