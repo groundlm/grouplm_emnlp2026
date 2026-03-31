@@ -48,7 +48,7 @@ const SPEAKERS = [
     name: "Freda Shi",
     affiliation: "University of Waterloo, Vector Institute",
     status: "confirmed",
-    bio: "Assistant Professor at the University of Waterloo and Faculty Member at the Vector Institute; works on learning language through grounding, computational multilingualism, and related machine learning aspects.",
+    bio: "Assistant Professor at the University of Waterloo and Faculty Member at the Vector Institute; works on computational linguistics and natural language processing.",
     url: "https://cs.uwaterloo.ca/~fhs/",
     photo: "img/freda.jpg",
   },
@@ -56,10 +56,19 @@ const SPEAKERS = [
     name: "Lei Li",
     affiliation: "Carnegie Mellon University",
     status: "confirmed",
-    bio: "Associate Professor at Carnegie Mellon University; works on generative AI for language and science, including multilingual NLP, machine translation (text, speech), security of large language models, agentic LLM, and AI for drug discovery and protein design.",
+    bio: "Associate Professor at Carnegie Mellon University; works on generative AI for language and science",
     url: "https://lileicc.github.io/",
     photo: "img/lei.jpg",
   },
+  {
+    name: "Krzysztof Czarnecki",
+    affiliation: "University of Waterloo",
+    status: "confirmed",
+    bio: "Professor at the University of Waterloo; works on autonomous systems and generative software development.",
+    url: "https://uwaterloo.ca/electrical-computer-engineering/profile/k2czarne",
+    photo: "img/krzysztof.jpg",
+  },
+
 
 ];
 
