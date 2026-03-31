@@ -48,17 +48,17 @@ const SPEAKERS = [
     name: "Freda Shi",
     affiliation: "University of Waterloo, Vector Institute",
     status: "confirmed",
-    bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
+    bio: "Assistant Professor at the University of Waterloo and Faculty Member at the Vector Institute; works on learning language through grounding, computational multilingualism, and related machine learning aspects.",
     url: "https://cs.uwaterloo.ca/~fhs/",
-    photo: null,
+    photo: "img/freda.jpg",
   },
   {
     name: "Lei Li",
     affiliation: "Carnegie Mellon University",
     status: "confirmed",
-    bio: "Brief bio or research focus describing the speaker's expertise in grounding and LLMs.",
+    bio: "Associate Professor at Carnegie Mellon University; works on generative AI for language and science, including multilingual NLP, machine translation (text, speech), security of large language models, agentic LLM, and AI for drug discovery and protein design.",
     url: "https://lileicc.github.io/",
-    photo: null,
+    photo: "img/lei.jpg",
   },
 
 ];
@@ -68,12 +68,12 @@ const SPEAKERS = [
  * photo: path to image, or null to show initials
  */
 const ORGANIZERS = [
-  { name: "Yimu Wang", affiliation: "University of Waterloo", url: "https://yimuwangcs.github.io/", photo: null },
-  { name: "Yee Man Choi", affiliation: "University of Waterloo", url: "https://kathcym.github.io/", photo: null },
-  { name: "Di Wu", affiliation: "University of Amsterdam", url: "https://moore3930.github.io/", photo: null },
-  { name: "Siqi Ouyang", affiliation: "Carnegie Mellon University", url: "https://owaski.github.io/", photo: null },
-  { name: "Mozhgan Nasr Azadani", affiliation: "University of Waterloo", url: "https://mozhgan91.github.io/", photo: null },
-  { name: "Yi R. (May) Fung", affiliation: "Hong Kong University of Science and Technology", url: "https://mayrfung.github.io/", photo: null },
+  { name: "Yimu Wang", affiliation: "University of Waterloo", url: "https://yimuwangcs.github.io/", photo: "img/yimuwang.jpg" },
+  { name: "Yee Man Choi", affiliation: "University of Waterloo", url: "https://kathcym.github.io/", photo: "img/Kath_pic.jpg" },
+  { name: "Di Wu", affiliation: "University of Amsterdam", url: "https://moore3930.github.io/", photo: "img/wu.jpg" },
+  { name: "Siqi Ouyang", affiliation: "Carnegie Mellon University", url: "https://owaski.github.io/", photo: "img/siqi.jpg" },
+  { name: "Mozhgan Nasr Azadani", affiliation: "University of Waterloo", url: "https://mozhgan91.github.io/", photo: "img/mozhgan.jpg" },
+  { name: "Yi R. (May) Fung", affiliation: "Hong Kong University of Science and Technology", url: "https://mayrfung.github.io/", photo: "img/yfung.jpg" },
 ];
 
 /**
