@@ -8,11 +8,12 @@ const SITE = {
   fullName: "Grounding Language Models: Learning Faithfully and Efficiently",
   conference: "EMNLP 2026",
   email: "groundlm@googlegroups.com",
-  openreviewUrl: "#", // Replace with actual OpenReview URL
+  openreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM",
+  reviewerFormUrl: "https://forms.gle/PMB4cfb1p32exSB19",
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
   announcement: {
-    text: "CFP Open — Direct submissions due <strong>2026-06-01 (AoE)</strong>.",
+    text: "CFP Open — Track 1 direct submissions due <strong>2026-06-29 (AoE)</strong>.",
     linkText: "Read CFP ↗",
     linkHref: "#cfp",
   },
@@ -31,10 +32,10 @@ const SITE = {
  * badge: "upcoming" | "past" | null
  */
 const DATES = [
-  { label: "Direct paper submission deadline",   date: "2026-06-01", badge: "upcoming" },
-  { label: "ARR commitment deadline",            date: "2026-06-25", badge: null },
-  { label: "Notification of acceptance",         date: "2026-07-03", badge: null },
-  { label: "Camera-ready paper due",             date: "2026-08-01", badge: null },
+  { label: "Track 1: Direct submission deadline", date: "2026-06-29", badge: "upcoming" },
+  { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: null },
+  { label: "Notification of acceptance",          date: "TBD", badge: null },
+  { label: "Camera-ready paper due",              date: "TBD", badge: null },
   { label: "Workshop date",                      date: "2026-10-TBD", badge: null },
 ];
 
@@ -125,7 +126,15 @@ const TOPICS = [
 const FAQ = [
   {
     q: "Can I submit work that is under review elsewhere?",
-    a: "For archival submissions, the work must not be under review at any other venue during the GroundLM review period. For non-archival submissions, concurrent submission to other venues is allowed.",
+    a: "For Track 1 archival submissions, the work must not be under review at another venue during the GroundLM review period. Non-archival submissions may overlap with previously published or concurrently submitted work. Track 2 is reserved for eligible ARR May 2026-or-earlier papers and papers rejected from other conferences.",
+  },
+  {
+    q: "What are the two submission tracks?",
+    a: "Track 1 is for direct submissions of new work, due June 29, 2026 AoE. Track 2 is an ARR commitment fast track, due August 5, 2026 AoE, for eligible ARR May 2026-or-earlier papers and papers rejected from other conferences.",
+  },
+  {
+    q: "Can I self-nominate as a reviewer or area chair?",
+    a: `Yes. Please fill out the <a href="${SITE.reviewerFormUrl}" style="color:var(--accent)">reviewer and area chair self-nomination form</a>.`,
   },
   {
     q: "Can I submit work that has already been published?",

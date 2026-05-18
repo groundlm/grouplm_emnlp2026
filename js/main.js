@@ -46,6 +46,7 @@ function renderHero() {
     <p class="hero-desc">${h.description}</p>
     <div class="hero-ctas">
       <a href="${SITE.openreviewUrl}" class="btn btn-primary">Submit on OpenReview</a>
+      <a href="${SITE.reviewerFormUrl}" class="btn btn-outline">Reviewer / AC Self-Nomination</a>
       <a href="#cfp"   class="btn btn-outline">Call for Papers</a>
       <a href="#dates" class="btn btn-outline">Important Dates</a>
     </div>`;
@@ -139,6 +140,9 @@ function renderContactLinks() {
   });
   document.querySelectorAll('[data-openreview-url]').forEach(el => {
     el.href = SITE.openreviewUrl;
+  });
+  document.querySelectorAll('[data-reviewer-form-url]').forEach(el => {
+    el.href = SITE.reviewerFormUrl;
   });
 }
 
