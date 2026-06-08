@@ -19,8 +19,8 @@ const SITE = {
   },
 
   hero: {
-    date: "24-29 Oct, 2026 (date&time TBD)",
-    location: "Budapest, Hungary",
+    date: "October 29, 2026, 9:00-17:30",
+    location: "Venue TBD",
     description: `A workshop at EMNLP 2026 bringing together researchers working on grounding,
       faithfulness, and efficiency in large language models — from retrieval-augmented generation
       and knowledge grounding to hallucination mitigation and evaluation.`,
@@ -35,8 +35,8 @@ const DATES = [
   { label: "Track 1: Direct submission deadline", date: "2026-06-29", badge: "upcoming" },
   { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: null },
   { label: "Notification of acceptance",          date: "TBD", badge: null },
-  { label: "Camera-ready paper due",              date: "TBD", badge: null },
-  { label: "Workshop date",                      date: "2026-10-TBD", badge: null },
+  { label: "Camera-ready paper due",              date: "2026-09-06", badge: null },
+  { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: null },
 ];
 
 /**
@@ -101,9 +101,9 @@ const PROGRAM = [
   { time: "14:45", title: "Invited Talk 4",                               speaker: "Speaker TBD",             type: "talk"   },
   { time: "15:30", title: "☕ Coffee Break",                              speaker: null,                      type: "break"  },
   { time: "15:45", title: "Poster Session",                               speaker: "All accepted papers",     type: "poster" },
-  { time: "17:00", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Invited speakers + moderator", type: "panel" },
-  { time: "17:45", title: "Closing Remarks + Best Paper Award",           speaker: "Organizing Committee",    type: "talk"   },
-  { time: "18:00", title: "🎉 Social / Reception",                       speaker: null,                      type: "break"  },
+  { time: "16:45", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Invited speakers + moderator", type: "panel" },
+  { time: "17:15", title: "Closing Remarks + Best Paper Award",           speaker: "Organizing Committee",    type: "talk"   },
+  { time: "17:30", title: "End of Workshop",                              speaker: null,                      type: "break"  },
 ];
 
 /**

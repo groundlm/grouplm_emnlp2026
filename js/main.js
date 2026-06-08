@@ -26,8 +26,12 @@ function avatar(person, size = 'md') {
 function renderAnnouncement() {
   const el = document.getElementById('ann-bar');
   if (!el || !SITE.announcement) return;
+  const href = SITE.announcement.linkHref;
+  const linkHref = href.startsWith('#') && !document.querySelector(href)
+    ? `index.html${href}`
+    : href;
   el.innerHTML = `${SITE.announcement.text}
-    <a href="${SITE.announcement.linkHref}">${SITE.announcement.linkText}</a>`;
+    <a href="${linkHref}">${SITE.announcement.linkText}</a>`;
 }
 
 /* ── HERO ── */
@@ -45,10 +49,12 @@ function renderHero() {
     </div>
     <p class="hero-desc">${h.description}</p>
     <div class="hero-ctas">
-      <a href="${SITE.openreviewUrl}" class="btn btn-primary">Submit on OpenReview</a>
+      <a href="#cfp" class="btn btn-primary">Call for Papers</a>
+      <a href="shared-tasks.html" class="btn btn-primary">Shared Tasks</a>
+      <span class="hero-cta-break" aria-hidden="true"></span>
+      <a href="${SITE.openreviewUrl}" class="btn btn-outline">Track 1 Submission</a>
       <a href="${SITE.reviewerFormUrl}" class="btn btn-outline">Reviewer / AC Self-Nomination</a>
-      <a href="#cfp"   class="btn btn-outline">Call for Papers</a>
-      <a href="#dates" class="btn btn-outline">Important Dates</a>
+      <a href="#dates" class="btn btn-outline">Paper Submission Dates</a>
     </div>`;
 }
 
@@ -149,7 +155,8 @@ function renderContactLinks() {
 /* ── NAV SCROLL HIGHLIGHT ── */
 function initScrollNav() {
   const sections = document.querySelectorAll('section[id], .hero[id]');
-  const navLinks  = document.querySelectorAll('nav a');
+  const navLinks  = document.querySelectorAll('nav a[href^="#"]');
+  if (!sections.length || !navLinks.length) return;
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => {

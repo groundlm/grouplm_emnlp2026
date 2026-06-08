@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shared Tasks | GroundLM 2026</title>
+  <meta name="description" content="Shared tasks at GroundLM 2026, an EMNLP 2026 workshop on grounding language models.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="data/config.js"></script>
+</head>
+<body>
+  <div class="ann-bar" id="ann-bar"></div>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-name">GroundLM 2026</span>
+        <span class="logo-sub">EMNLP 2026 Workshop</span>
+      </a>
+      <nav id="main-nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#cfp">CFP</a>
+        <a href="index.html#dates">Dates</a>
+        <a href="shared-tasks.html" class="active">Shared Tasks</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="index.html#organizers">Organizers</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#venue">Venue</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="subpage-hero">
+    <div class="subpage-hero-inner">
+      <div class="hero-badge">GroundLM 2026 Shared Tasks</div>
+      <h1>Shared Tasks</h1>
+      <p>
+        GroundLM 2026 will host shared tasks that turn grounding challenges into concrete,
+        reproducible evaluations. Paper submissions remain the primary focus of the main workshop;
+        this page collects shared-task information, datasets, and participation details.
+      </p>
+      <div class="hero-ctas">
+        <a href="#goldenviewvqa" class="btn btn-primary">GoldenViewVQA</a>
+        <a href="#multi-document-grounding" class="btn btn-outline">Multi-Document Grounding</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-body shared-page">
+    <section id="overview">
+      <div class="section-header">
+        <div class="section-label">Overview</div>
+        <h2>Task Format</h2>
+      </div>
+      <div class="shared-intro">
+        <p>
+          Shared tasks are intended to complement the workshop CFP by giving participants a common
+          evaluation setup for grounded language-model behavior. Each task will provide public
+          development material, submission-format guidance, and held-out evaluation data for final ranking.
+        </p>
+      </div>
+      <div class="task-grid">
+        <a class="task-summary-card" href="#goldenviewvqa">
+          <div class="track-kicker">Shared Task 1</div>
+          <h3>GoldenViewVQA</h3>
+          <p>Multi-view visual question answering with evidence-source identification in driving scenes.</p>
+        </a>
+        <a class="task-summary-card" href="#multi-document-grounding">
+          <div class="track-kicker">Shared Task 2</div>
+          <h3>Multi-Document Grounding Reasoning</h3>
+          <p>Grounded reasoning over multiple documents. Details will be announced soon.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="shared-task-dates">
+      <div class="section-header">
+        <div class="section-label">Timeline</div>
+        <h2>Shared Task Dates</h2>
+      </div>
+      <p class="note" style="margin-bottom:20px;">
+        The schedule below applies to the GroundLM 2026 shared tasks.
+      </p>
+      <table class="dates-table">
+        <thead>
+          <tr><th>Activity</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Activity">Dataset (dev) release</td>
+            <td class="date-col">June 8, 2026 (Shared Task 1); June 15, 2026 (Shared Task 2)</td>
+          </tr>
+          <tr>
+            <td data-label="Activity">Dataset (test) release</td>
+            <td class="date-col">August 3, 2026</td>
+          </tr>
+          <tr>
+            <td data-label="Activity">Submission of test output, code, and system papers</td>
+            <td class="date-col">August 15, 2026</td>
+          </tr>
+          <tr>
+            <td data-label="Activity">Acceptance and winner announcement</td>
+            <td class="date-col">September 1, 2026</td>
+          </tr>
+          <tr>
+            <td data-label="Activity">Camera-ready papers</td>
+            <td class="date-col">September 10, 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="goldenviewvqa">
+      <div class="section-header">
+        <div class="section-label">Shared Task 1</div>
+        <h2>GoldenViewVQA: Multi-View Grounded VQA for Driving Scenes</h2>
+      </div>
+
+      <div class="task-detail">
+        <p>
+          GoldenViewVQA evaluates whether multimodal systems can identify the visual evidence needed
+          to answer a question. Given six synchronized NuScenes camera views and a question, a model
+          must select the supporting camera view and answer the multiple-choice question.
+        </p>
+
+        <div class="task-facts">
+          <div>
+            <span class="fact-label">Input</span>
+            <strong>Six synchronized NuScenes camera views + one question</strong>
+          </div>
+          <div>
+            <span class="fact-label">Output</span>
+            <strong>Supporting view and answer choice</strong>
+          </div>
+          <div>
+            <span class="fact-label">Public dev set</span>
+            <strong>55 labeled examples, 330 image references</strong>
+          </div>
+          <div>
+            <span class="fact-label">Primary metric</span>
+            <strong>Joint accuracy</strong>
+          </div>
+        </div>
+
+        <h3>Evaluation</h3>
+        <p>
+          Submissions should contain one JSON object per question with a question identifier,
+          predicted supporting view, and predicted answer choice.
+        </p>
+        <pre class="code-sample"><code>{"question_id": "sfall_0001_causality", "predicted_view": "CAM_FRONT", "predicted_answer_id": "A"}</code></pre>
+        <p>
+          The development evaluator reports view accuracy, answer accuracy, and joint accuracy.
+          Final ranking will use a held-out input-only test set with private gold labels.
+        </p>
+
+        <h3>Development Release</h3>
+        <p>
+          The current Hugging Face release is the public development set. It is intended for task
+          familiarization, data loading, prompt and model development, local evaluation, and
+          submission-format checks. It should not be treated as the final leaderboard test set.
+        </p>
+
+        <h3>Resources</h3>
+        <div class="resource-links">
+          <a class="btn btn-primary" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">Dataset on Hugging Face</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA/blob/main/docs/schema.md">Schema</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA/blob/main/scripts/evaluate.py">Evaluator</a>
+        </div>
+
+        <p class="note">
+          The dataset provides benchmark annotations and NuScenes-relative image paths. Participants
+          must obtain NuScenes through the official access process and comply with its terms of use.
+        </p>
+      </div>
+    </section>
+
+    <section id="multi-document-grounding">
+      <div class="section-header">
+        <div class="section-label">Shared Task 2</div>
+        <h2>Multi-Document Grounding Reasoning</h2>
+      </div>
+      <div class="task-detail">
+        <p>
+          This task will evaluate grounded reasoning across multiple documents, with an emphasis on
+          evidence attribution, cross-document synthesis, and faithful answer generation. Dataset,
+          submission, and evaluation details will be announced soon.
+        </p>
+        <div class="task-facts">
+          <div>
+            <span class="fact-label">Status</span>
+            <strong>Coming soon</strong>
+          </div>
+          <div>
+            <span class="fact-label">Focus</span>
+            <strong>Multi-document evidence grounding</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-name" style="font-family:'Source Serif 4',serif;">GroundLM 2026</div>
+        <div class="logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;color:#5a6a88;">EMNLP 2026 Workshop</div>
+        <p>Grounding Language Models: Learning Faithfully and Efficiently.</p>
+        <p style="margin-top:8px;">Contact: <a href="#" data-email style="color:#6a8ab8;text-decoration:none;"></a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#cfp">Call for Papers</a></li>
+          <li><a href="index.html#dates">Paper Submission Dates</a></li>
+          <li><a href="shared-tasks.html">Shared Tasks</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="index.html#organizers">Organizers</a></li>
+          <li><a href="index.html#program">Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#" data-openreview-url>Track 1 OpenReview Submission</a></li>
+          <li><a href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">GoldenViewVQA Dataset</a></li>
+          <li><a href="#" data-emnlp-url>EMNLP 2026</a></li>
+          <li><a href="https://aclanthology.org/">ACL Anthology</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GroundLM Workshop Organizers</span>
+      <span>Co-located with <a href="#" data-emnlp-url>EMNLP 2026</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
