@@ -53,6 +53,7 @@ function renderHero() {
       <a href="shared-tasks.html" class="btn btn-primary">Shared Tasks</a>
       <span class="hero-cta-break" aria-hidden="true"></span>
       <a href="${SITE.openreviewUrl}" class="btn btn-outline">Track 1 Submission</a>
+      <a href="${SITE.arrCommitmentOpenreviewUrl}" class="btn btn-outline">Track 2 ARR Commitment</a>
       <a href="${SITE.reviewerFormUrl}" class="btn btn-outline">Reviewer / AC Self-Nomination</a>
       <a href="#dates" class="btn btn-outline">Paper Submission Dates</a>
     </div>`;
@@ -146,6 +147,12 @@ function renderContactLinks() {
   });
   document.querySelectorAll('[data-openreview-url]').forEach(el => {
     el.href = SITE.openreviewUrl;
+  });
+  document.querySelectorAll('[data-arr-openreview-url]').forEach(el => {
+    el.href = SITE.arrCommitmentOpenreviewUrl;
+  });
+  document.querySelectorAll('[data-shared-tasks-openreview-url]').forEach(el => {
+    el.href = SITE.sharedTasksOpenreviewUrl;
   });
   document.querySelectorAll('[data-reviewer-form-url]').forEach(el => {
     el.href = SITE.reviewerFormUrl;

@@ -9,6 +9,8 @@ const SITE = {
   conference: "EMNLP 2026",
   email: "groundlm@googlegroups.com",
   openreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM",
+  arrCommitmentOpenreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_ARR_Commitment",
+  sharedTasksOpenreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_Shared_Tasks",
   reviewerFormUrl: "https://forms.gle/PMB4cfb1p32exSB19",
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
@@ -20,7 +22,7 @@ const SITE = {
 
   hero: {
     date: "October 29, 2026, 9:00-17:30",
-    location: "Venue TBD",
+    location: "Budapest, Hungary",
     description: `A workshop at EMNLP 2026 bringing together researchers working on grounding,
       faithfulness, and efficiency in large language models — from retrieval-augmented generation
       and knowledge grounding to hallucination mitigation and evaluation.`,
@@ -34,7 +36,7 @@ const SITE = {
 const DATES = [
   { label: "Track 1: Direct submission deadline", date: "2026-06-29", badge: "upcoming" },
   { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: null },
-  { label: "Notification of acceptance",          date: "TBD", badge: null },
+  { label: "Notification of acceptance",          date: "Mid August 2026", badge: null },
   { label: "Camera-ready paper due",              date: "2026-09-06", badge: null },
   { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: null },
 ];

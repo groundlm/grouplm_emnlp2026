@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GroundLM 2026 Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #14213d;
+      --ink: #172033;
+      --muted: #596579;
+      --blue: #2e6fba;
+      --sky: #dfefff;
+      --gold: #c8952a;
+      --gold-soft: #f6e6c6;
+      --green: #2f7d62;
+      --green-soft: #dff1e9;
+      --paper: #fbfbfd;
+      --line: #d9dfeb;
+      --white: #ffffff;
+      --serif: "Source Serif 4", Georgia, serif;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #eef2f7;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.4;
+    }
+
+    .poster-shell {
+      width: min(1180px, calc(100vw - 32px));
+      min-height: 1668px;
+      margin: 24px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(20, 33, 61, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(46, 111, 186, 0.06) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(46, 111, 186, 0.05) 1px, transparent 1px);
+      background-size: 42px 42px;
+      pointer-events: none;
+    }
+
+    .poster {
+      position: relative;
+      padding: 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #101a31 0%, #17345d 62%, #245a83 100%);
+      color: var(--white);
+      padding: 48px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -130px;
+      top: -140px;
+      width: 470px;
+      height: 470px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 72px rgba(255,255,255,0.025);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 890px;
+    }
+
+    .hero-logo {
+      width: min(470px, 45%);
+      display: block;
+      margin-left: auto;
+      margin-bottom: 28px;
+      object-fit: contain;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 22px;
+      color: #b9d7f6;
+      font-family: var(--mono);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 64px;
+      line-height: 1.04;
+      letter-spacing: 0;
+      font-weight: 700;
+      max-width: 850px;
+    }
+
+    .subtitle {
+      margin: 22px 0 0;
+      color: #d5e8fb;
+      font-size: 25px;
+      max-width: 760px;
+    }
+
+    .hero-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 8px 16px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #eef6ff;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 26px;
+      margin-top: 28px;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(20, 33, 61, 0.06);
+    }
+
+    .panel.soft-blue { background: #f4f9ff; }
+    .panel.soft-gold { background: #fff9ef; }
+    .panel.soft-green { background: #f5fbf8; }
+
+    .section-label {
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-family: var(--serif);
+      font-size: 35px;
+      line-height: 1.12;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.18;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .topic {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid #cfdced;
+      border-radius: 7px;
+      background: var(--white);
+      color: #28334a;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.28;
+    }
+
+    .tracks {
+      display: grid;
+      gap: 16px;
+    }
+
+    .track {
+      padding: 20px;
+      border-radius: 7px;
+      border: 1px solid #cfdced;
+      background: var(--white);
+    }
+
+    .track-kicker {
+      color: var(--blue);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .deadline {
+      display: inline-flex;
+      margin: 8px 0 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: var(--sky);
+      color: #174d87;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .paper-types {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .paper-type {
+      min-height: 102px;
+      padding: 16px;
+      border-radius: 7px;
+      background: var(--white);
+      border: 1px solid #ead6aa;
+    }
+
+    .paper-type strong {
+      display: block;
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .paper-type span {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .shared-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .shared-task {
+      min-height: 210px;
+      padding: 20px;
+      border-radius: 7px;
+      background: var(--white);
+      border: 1px solid #cfe5dc;
+    }
+
+    .task-number {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .date-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .date-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #dfe7f0;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .date-row:last-child { border-bottom: 0; }
+    .date-row strong { color: var(--navy); }
+
+    .organizers {
+      grid-column: 1 / -1;
+    }
+
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .org {
+      padding: 14px 10px 16px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      text-align: center;
+      min-height: 196px;
+    }
+
+    .org img {
+      width: 82px;
+      height: 82px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #e7eef8;
+      margin-bottom: 10px;
+    }
+
+    .org strong {
+      display: block;
+      min-height: 42px;
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.18;
+    }
+
+    .org span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.22;
+    }
+
+    .footer-strip {
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 28px;
+      padding: 22px 26px;
+      border-radius: 8px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .footer-strip p {
+      color: #d4e3f6;
+      font-size: 18px;
+    }
+
+    .url-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 10px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .url-box:hover {
+      background: rgba(255,255,255,0.16);
+    }
+
+    .url-box img {
+      width: 72px;
+      height: 72px;
+      padding: 4px;
+      border-radius: 4px;
+      background: #ffffff;
+    }
+
+    .url-box span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .url-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @media print {
+      @page { size: A4 portrait; margin: 0; }
+      body { background: #fff; }
+      .poster-shell {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+      .poster { padding: 10mm; }
+      .hero { padding: 9mm; }
+      h1 { font-size: 34pt; }
+      h2 { font-size: 19pt; }
+      h3 { font-size: 12.5pt; }
+      p, .topic, .date-row { font-size: 9.5pt; }
+      .poster-shell::before { background-size: 12mm 12mm; }
+      .org img { width: 16mm; height: 16mm; }
+      .org strong { font-size: 8.5pt; min-height: 20px; }
+      .org span { font-size: 6.8pt; }
+      .panel { break-inside: avoid; }
+    }
+
+    @media (max-width: 900px) {
+      .poster { padding: 24px; }
+      .hero { padding: 30px; }
+      h1 { font-size: 42px; }
+      .subtitle { font-size: 20px; }
+      .main-grid,
+      .topic-grid,
+      .paper-types,
+      .shared-grid {
+        grid-template-columns: 1fr;
+      }
+      .org-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-strip {
+        grid-template-columns: 1fr;
+      }
+      .url-list {
+        grid-template-columns: 1fr;
+      }
+      .url-box img {
+        width: 58px;
+        height: 58px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster-shell">
+    <div class="poster">
+      <section class="hero">
+        <div class="hero-content">
+          <img class="hero-logo" src="img/emnlp_2026_logo_v0.png" alt="EMNLP 2026 Budapest, Hungary logo">
+          <div class="eyebrow">Workshop at EMNLP 2026</div>
+          <h1>Grounding Language Models: Learning Faithfully and Efficiently</h1>
+          <p class="subtitle">GroundLM 2026 brings together work on grounding, faithfulness, efficiency, hallucination mitigation, retrieval, evaluation, and real-world reliability.</p>
+          <div class="hero-row">
+            <span class="pill">October 29, 2026</span>
+            <span class="pill">EMNLP 2026 Workshop</span>
+            <span class="pill">Budapest, Hungary</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-grid">
+        <section class="panel soft-blue">
+          <div class="section-label">Call For Papers</div>
+          <h2>What Papers We Welcome</h2>
+          <p>We invite original research on grounded language models, especially work that improves faithful behavior, efficient adaptation, evidence use, and evaluation in realistic settings.</p>
+          <div class="topic-grid">
+            <div class="topic">Faithful grounding, hallucination reduction, attribution, and verifiability</div>
+            <div class="topic">Efficient grounding, PEFT, LoRA, prompt tuning, feedback, and scaling</div>
+            <div class="topic">Retrieval, external knowledge, tool use, interaction, action, and embodiment</div>
+            <div class="topic">Multimodal grounding, benchmarks, metrics, robustness, privacy, and bias</div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-label">Submission Tracks</div>
+          <h2>Two Ways to Submit</h2>
+          <div class="tracks">
+            <div class="track">
+              <div class="track-kicker">Track 1</div>
+              <h3>Direct Submission</h3>
+              <div class="deadline">Due June 29, 2026 AoE</div>
+              <p>New work submitted directly to GroundLM. Archival and non-archival papers are welcome.</p>
+            </div>
+            <div class="track">
+              <div class="track-kicker">Track 2</div>
+              <h3>ARR Commitment Fast Track</h3>
+              <div class="deadline">Due August 5, 2026 AoE</div>
+              <p>Eligible ARR May 2026-or-earlier papers and papers rejected from other conferences, with reviews and meta-reviews.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel soft-gold">
+          <div class="section-label">Paper Types</div>
+          <h2>Archival and Non-Archival</h2>
+          <div class="paper-types">
+            <div class="paper-type">
+              <strong>Long Papers</strong>
+              <span>Up to 8 pages of content, unlimited references.</span>
+            </div>
+            <div class="paper-type">
+              <strong>Short Papers</strong>
+              <span>Up to 4 pages of content, unlimited references.</span>
+            </div>
+            <div class="paper-type">
+              <strong>Non-Archival</strong>
+              <span>No page limit; 4-8 pages is standard.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-label">Key Dates</div>
+          <h2>Important Deadlines</h2>
+          <div class="date-list">
+            <div class="date-row"><span>Track 1 direct submission</span><strong>June 29, 2026</strong></div>
+            <div class="date-row"><span>Track 2 ARR commitment</span><strong>August 5, 2026</strong></div>
+            <div class="date-row"><span>Camera-ready papers</span><strong>September 6, 2026</strong></div>
+            <div class="date-row"><span>Workshop date</span><strong>October 29, 2026</strong></div>
+          </div>
+        </section>
+
+        <section class="panel soft-green">
+          <div class="section-label">Shared Tasks</div>
+          <h2>Grounded Evaluation Challenges</h2>
+          <div class="shared-grid">
+            <div class="shared-task">
+              <div class="task-number">Shared Task 1</div>
+              <h3>GoldenViewVQA</h3>
+              <p>Multi-view visual question answering for driving scenes. Systems identify the supporting camera view and answer the question.</p>
+            </div>
+            <div class="shared-task">
+              <div class="task-number">Shared Task 2</div>
+              <h3>Multi-Document Grounding Reasoning</h3>
+              <p>Grounded reasoning over multiple documents, focusing on evidence attribution, synthesis, and faithful answer generation.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="section-label">Shared Task Timeline</div>
+          <h2>Task Milestones</h2>
+          <div class="date-list">
+            <div class="date-row"><span>Development data release</span><strong>June 2026</strong></div>
+            <div class="date-row"><span>Test data release</span><strong>August 3, 2026</strong></div>
+            <div class="date-row"><span>System outputs and papers</span><strong>August 19, 2026</strong></div>
+            <div class="date-row"><span>Winner announcement</span><strong>September 1, 2026</strong></div>
+          </div>
+        </section>
+
+        <section class="panel organizers">
+          <div class="section-label">Organizers</div>
+          <h2>Organizing Committee</h2>
+          <div class="org-grid">
+            <div class="org">
+              <img src="img/yimuwang.jpg" alt="Yimu Wang">
+              <strong>Yimu Wang</strong>
+              <span>University of Waterloo</span>
+            </div>
+            <div class="org">
+              <img src="img/Kath_pic.jpg" alt="Yee Man Choi">
+              <strong>Yee Man Choi</strong>
+              <span>University of Waterloo</span>
+            </div>
+            <div class="org">
+              <img src="img/wu.jpg" alt="Di Wu">
+              <strong>Di Wu</strong>
+              <span>University of Amsterdam</span>
+            </div>
+            <div class="org">
+              <img src="img/siqi.jpg" alt="Siqi Ouyang">
+              <strong>Siqi Ouyang</strong>
+              <span>Carnegie Mellon University</span>
+            </div>
+            <div class="org">
+              <img src="img/mozhgan.jpg" alt="Mozhgan Nasr Azadani">
+              <strong>Mozhgan Nasr Azadani</strong>
+              <span>University of Waterloo</span>
+            </div>
+            <div class="org">
+              <img src="img/yfung.jpg" alt="Yi R. Fung">
+              <strong>Yi R. (May) Fung</strong>
+              <span>HKUST</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer-strip">
+        <p><strong>GroundLM 2026</strong> welcomes submissions on grounded, faithful, efficient, and reliable language models.</p>
+        <div class="url-list">
+          <a class="url-box" href="https://groundlm.github.io/grouplm_emnlp2026/index.html">
+            <img src="img/qr-homepage.png" alt="QR code for GroundLM 2026 homepage">
+            <span>Homepage</span>
+          </a>
+          <a class="url-box" href="https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM">
+            <img src="img/qr-track1.png" alt="QR code for Track 1 submission">
+            <span>Track 1 Direct Submission</span>
+          </a>
+          <a class="url-box" href="https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_ARR_Commitment">
+            <img src="img/qr-arr.png" alt="QR code for ARR commitment submission">
+            <span>Track 2 ARR Commitment</span>
+          </a>
+          <a class="url-box" href="https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_Shared_Tasks">
+            <img src="img/qr-shared-tasks.png" alt="QR code for shared tasks submission">
+            <span>Shared Tasks Submission</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

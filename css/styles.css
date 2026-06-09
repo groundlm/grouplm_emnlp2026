@@ -61,9 +61,22 @@ header {
   justify-content: space-between;
   height: 60px;
 }
-.logo { display: flex; flex-direction: column; text-decoration: none; line-height: 1.2; }
+.logo { display: flex; align-items: center; gap: 14px; line-height: 1.2; }
+.logo-copy { display: flex; flex-direction: column; text-decoration: none; }
 .logo-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--navy); letter-spacing: -0.01em; }
 .logo-sub  { font-size: 0.72rem; color: var(--text-muted); font-family: var(--mono); letter-spacing: 0.04em; }
+.logo-mark-link {
+  display: flex;
+  align-items: center;
+}
+.logo-mark {
+  width: 150px;
+  max-height: 36px;
+  padding: 3px 6px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.92);
+  object-fit: contain;
+}
 
 nav { display: flex; align-items: center; gap: 2px; }
 nav a {
@@ -593,6 +606,7 @@ footer { background: var(--navy-dark); color: #8090b0; padding: 48px 24px 32px; 
 }
 @media (max-width: 600px) {
   .hero { padding: 48px 20px 40px; }
+  .logo-mark { display: none; }
   .hero h1 { font-size: 1.6rem; }
   .speakers-grid { grid-template-columns: repeat(2, 1fr); }
   .shared-page .dates-table,
