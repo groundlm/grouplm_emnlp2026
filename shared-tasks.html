@@ -53,7 +53,7 @@
       </p>
       <div class="hero-ctas">
         <a href="#goldenviewvqa" class="btn btn-primary">GoldenViewVQA</a>
-        <a href="#multi-document-grounding" class="btn btn-outline">Multi-Document Grounding</a>
+        <a href="#littraceqa" class="btn btn-primary">LitTraceQA</a>
         <a href="#" data-shared-tasks-openreview-url class="btn btn-outline">Shared Tasks Submission</a>
       </div>
     </div>
@@ -73,16 +73,60 @@
         </p>
       </div>
       <div class="task-grid">
-        <a class="task-summary-card" href="#goldenviewvqa">
+        <div class="task-summary-card">
           <div class="track-kicker">Shared Task 1</div>
           <h3>GoldenViewVQA</h3>
           <p>Multi-view visual question answering with evidence-source identification in driving scenes.</p>
-        </a>
-        <a class="task-summary-card" href="#multi-document-grounding">
+          <div class="task-facts">
+            <div>
+              <span class="fact-label">Input</span>
+              <strong>Six synchronized camera views + question</strong>
+            </div>
+            <div>
+              <span class="fact-label">Output</span>
+              <strong>Supporting view + answer choice</strong>
+            </div>
+            <div>
+              <span class="fact-label">Public dev set</span>
+              <strong>55 labeled examples</strong>
+            </div>
+            <div>
+              <span class="fact-label">Primary metric</span>
+              <strong>Joint accuracy</strong>
+            </div>
+          </div>
+          <div class="resource-links">
+            <a class="btn btn-primary" href="#goldenviewvqa">View Task</a>
+            <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">Dataset</a>
+          </div>
+        </div>
+        <div class="task-summary-card">
           <div class="track-kicker">Shared Task 2</div>
-          <h3>Multi-Document Grounding Reasoning</h3>
-          <p>Grounded reasoning over multiple documents. Details will be announced soon.</p>
-        </a>
+          <h3>LitTraceQA</h3>
+          <p>Literature-grounded question answering with paper retrieval, evidence grounding, and answer generation.</p>
+          <div class="task-facts">
+            <div>
+              <span class="fact-label">Input</span>
+              <strong>Research question + paper metadata pool</strong>
+            </div>
+            <div>
+              <span class="fact-label">Output</span>
+              <strong>Paper IDs + evidence + answer</strong>
+            </div>
+            <div>
+              <span class="fact-label">Public dev set</span>
+              <strong>55 labeled examples</strong>
+            </div>
+            <div>
+              <span class="fact-label">Evaluation</span>
+              <strong>Retrieval, grounding, and answer accuracy</strong>
+            </div>
+          </div>
+          <div class="resource-links">
+            <a class="btn btn-primary" href="#littraceqa">View Task</a>
+            <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">Dataset</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -188,27 +232,71 @@
       </div>
     </section>
 
-    <section id="multi-document-grounding">
+    <section id="littraceqa">
       <div class="section-header">
         <div class="section-label">Shared Task 2</div>
-        <h2>Multi-Document Grounding Reasoning</h2>
+        <h2>LitTraceQA: Literature-Grounded Question Answering</h2>
       </div>
       <div class="task-detail">
         <p>
-          This task will evaluate grounded reasoning across multiple documents, with an emphasis on
-          evidence attribution, cross-document synthesis, and faithful answer generation. Dataset,
-          submission, and evaluation details will be announced soon.
+          LitTraceQA evaluates whether systems can answer research questions with grounded evidence
+          from scientific papers. Given a question and requested answer types, a system must retrieve
+          the relevant paper or papers from the released metadata pool, identify coarse evidence
+          locations, and return the final answer in the requested format.
         </p>
+
         <div class="task-facts">
           <div>
-            <span class="fact-label">Status</span>
-            <strong>Coming soon</strong>
+            <span class="fact-label">Input</span>
+            <strong>Research question, answer types, and paper metadata pool</strong>
           </div>
           <div>
-            <span class="fact-label">Focus</span>
-            <strong>Multi-document evidence grounding</strong>
+            <span class="fact-label">Output</span>
+            <strong>Paper IDs, evidence locations, and final answer</strong>
+          </div>
+          <div>
+            <span class="fact-label">Public dev set</span>
+            <strong>55 labeled validation examples</strong>
+          </div>
+          <div>
+            <span class="fact-label">Primary components</span>
+            <strong>Retrieval, evidence grounding, and answer accuracy</strong>
           </div>
         </div>
+
+        <h3>Evaluation</h3>
+        <p>
+          Submissions should contain one JSON object per question with a stable query identifier,
+          retrieved paper IDs, supporting evidence locations, and the answer object.
+        </p>
+        <pre class="code-sample"><code>{"query_id": "q_001", "gold_papers": [{"paper_id": "acl2025_00005"}], "evidence": [{"paper_id": "acl2025_00005", "source_type": "table", "locator": {"page": 6, "table_id": "Table 4"}}], "answer": {"freeform": {"text": "14.70"}}}</code></pre>
+        <p>
+          The public evaluator reports macro paper retrieval precision, recall, and F1; macro
+          evidence precision, recall, and F1 using coarse evidence matches; and answer metrics for
+          multiple-choice, freeform, and table outputs. Final ranking will use a hidden evaluation set.
+        </p>
+
+        <h3>Development Release</h3>
+        <p>
+          The current Hugging Face release is the public development set. It includes gold validation
+          records, input-only validation records, a sample submission, a searchable paper metadata pool,
+          a machine-readable schema, and a local evaluator. It is intended for format inspection,
+          loader development, prompt tuning, and local validation, not as the hidden leaderboard test set.
+        </p>
+
+        <h3>Resources</h3>
+        <div class="resource-links">
+          <a class="btn btn-primary" href="#" data-shared-tasks-openreview-url>Submit to Shared Tasks</a>
+          <a class="btn btn-primary" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">Dataset on Hugging Face</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/docs/format.md">Format</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/docs/evaluation.md">Evaluation</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/scripts/evaluate.py">Evaluator</a>
+        </div>
+
+        <p class="note">
+          LitTraceQA annotations and benchmark files are released under CC BY-NC 4.0. Paper metadata
+          remains subject to the original publishers' terms, and PDFs are not redistributed in the dataset.
+        </p>
       </div>
     </section>
   </main>
@@ -240,6 +328,7 @@
           <li><a href="#" data-arr-openreview-url>Track 2 ARR Commitment Submission</a></li>
           <li><a href="#" data-shared-tasks-openreview-url>Shared Tasks OpenReview Submission</a></li>
           <li><a href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">GoldenViewVQA Dataset</a></li>
+          <li><a href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">LitTraceQA Dataset</a></li>
           <li><a href="#" data-emnlp-url>EMNLP 2026</a></li>
           <li><a href="https://aclanthology.org/">ACL Anthology</a></li>
         </ul>
