@@ -52,7 +52,7 @@ function renderHero() {
       <a href="#cfp" class="btn btn-primary">Call for Papers</a>
       <a href="shared-tasks.html" class="btn btn-primary">Shared Tasks</a>
       <span class="hero-cta-break" aria-hidden="true"></span>
-      <a href="${SITE.openreviewUrl}" class="btn btn-outline">Track 1 Submission</a>
+      <a href="${SITE.openreviewUrl}" class="btn btn-outline is-past-link">Track 1 Submission</a>
       <a href="${SITE.arrCommitmentOpenreviewUrl}" class="btn btn-outline">Track 2 ARR Commitment</a>
       <a href="${SITE.reviewerFormUrl}" class="btn btn-outline">Reviewer / AC Self-Nomination</a>
       <a href="#dates" class="btn btn-outline">Paper Submission Dates</a>

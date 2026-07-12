@@ -188,6 +188,21 @@ nav a.active { color: var(--accent); background: var(--accent-pale); }
 .btn-primary:hover { background: #3a80ca; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(74,143,212,0.4); }
 .btn-outline { background: transparent; color: #c0d4ec; border: 1px solid rgba(200,220,240,0.35); }
 .btn-outline:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.is-past-link {
+  color: #8a92a0 !important;
+  text-decoration-line: line-through !important;
+  text-decoration-style: dashed !important;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+.btn.is-past-link {
+  border-color: rgba(138,146,160,0.45);
+}
+.btn.is-past-link:hover {
+  color: #8a92a0 !important;
+  transform: none;
+  box-shadow: none;
+}
 .btn-light {
   background: var(--white);
   color: var(--accent);
@@ -413,6 +428,16 @@ h2 {
   border-radius: 8px;
   padding: 20px;
   box-shadow: var(--shadow);
+}
+.track-card.is-past-track {
+  background: #f8f9fb;
+}
+.past-line {
+  color: #8a92a0 !important;
+  text-decoration-line: line-through;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #8a92a0;
 }
 .track-kicker {
   font-family: var(--mono);
