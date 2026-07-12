@@ -15,7 +15,7 @@ const SITE = {
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
   announcement: {
-    text: "CFP Open — Track 1 direct submissions extended to <strong>2026-07-07 (AoE)</strong>.",
+    text: "Next deadline — Track 2 ARR commitments due <strong>2026-08-05 (AoE)</strong>.",
     linkText: "Read CFP ↗",
     linkHref: "#cfp",
   },
@@ -34,8 +34,8 @@ const SITE = {
  * badge: "upcoming" | "past" | null
  */
 const DATES = [
-  { label: "Track 1: Direct submission deadline", date: "2026-07-07", badge: "upcoming" },
-  { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: null },
+  { label: "Track 1: Direct submission deadline", date: "2026-07-07", badge: "past" },
+  { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: "upcoming" },
   { label: "Notification of acceptance",          date: "Mid August 2026", badge: null },
   { label: "Camera-ready paper due",              date: "2026-09-06", badge: null },
   { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: null },
@@ -132,7 +132,7 @@ const FAQ = [
   },
   {
     q: "What are the two submission tracks?",
-    a: "Track 1 is for direct submissions of new work, extended to July 7, 2026 AoE. Track 2 is an ARR commitment fast track, due August 5, 2026 AoE, for eligible ARR May 2026-or-earlier papers and papers rejected from other conferences.",
+    a: "Track 1 direct submissions closed on July 7, 2026 AoE. Track 2 is an ARR commitment fast track, due August 5, 2026 AoE, for eligible ARR May 2026-or-earlier papers and papers rejected from other conferences.",
   },
   {
     q: "Can I self-nominate as a reviewer or area chair?",
