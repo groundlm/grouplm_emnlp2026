@@ -74,9 +74,10 @@ function renderDates() {
     const badge = d.badge
       ? `<span class="badge badge-${d.badge}">${d.badge}</span>`
       : '';
-    return `<tr>
-      <td>${d.label}${badge}</td>
-      <td class="date-col">${d.date}</td>
+    const rowClass = d.badge === 'past' ? ' class="is-past"' : '';
+    return `<tr${rowClass}>
+      <td><span class="date-text">${d.label}</span>${badge}</td>
+      <td class="date-col"><span class="date-text">${d.date}</span></td>
     </tr>`;
   }).join('');
 }

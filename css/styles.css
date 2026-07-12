@@ -301,6 +301,13 @@ h2 {
 .dates-table tr:last-child td { border-bottom: none; }
 .dates-table tr:hover td { background: var(--accent-pale); }
 .dates-table .date-col { font-family: var(--mono); font-size: 0.82rem; color: var(--accent); white-space: nowrap; min-width: 140px; }
+.dates-table tr.is-past .date-text {
+  color: #8a92a0;
+  text-decoration-line: line-through;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #8a92a0;
+}
 
 /* ── SPEAKERS ── */
 .speakers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
