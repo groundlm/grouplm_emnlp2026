@@ -55,6 +55,7 @@
       <div class="hero-ctas">
         <a href="#goldenviewvqa" class="btn btn-outline">GoldenViewVQA</a>
         <a href="#littraceqa" class="btn btn-outline">LitTraceQA</a>
+        <a href="#participation-checklist" class="btn btn-primary">How to Participate</a>
         <a href="#system-papers" class="btn btn-primary">Paper Instructions</a>
         <a href="#" data-shared-tasks-openreview-url class="btn btn-primary">Shared Tasks Submission</a>
         <a href="#" data-discord-url class="btn btn-outline">Discord Q&amp;A</a>
@@ -71,7 +72,7 @@
       <div class="shared-intro">
         <p>
           Shared tasks are intended to complement the workshop CFP by giving participants a common
-          evaluation setup for grounded language-model behavior. Each task will provide public
+          evaluation setup for grounded language-model behavior. Each task provides public
           development material, submission-format guidance, and held-out evaluation data for final ranking.
           Participants can ask questions in the
           <a href="#" data-discord-url>GroundLM Discord</a>.
@@ -137,6 +138,62 @@
       </div>
     </section>
 
+    <section id="participation-checklist">
+      <div class="section-header">
+        <div class="section-label">Participation</div>
+        <h2>How to Participate</h2>
+      </div>
+      <div class="system-paper-detail">
+        <p>
+          Use the Hugging Face datasets for the public data and input-only test splits, then submit
+          prediction files to the official evaluator Space. The evaluator is the source of record
+          for held-out scores and leaderboard rankings.
+        </p>
+
+        <div class="task-facts">
+          <div>
+            <span class="fact-label">Step 1</span>
+            <strong>Sign in to the evaluator Space with a Hugging Face account</strong>
+          </div>
+          <div>
+            <span class="fact-label">Step 2</span>
+            <strong>Register one immutable team name and contact email</strong>
+          </div>
+          <div>
+            <span class="fact-label">Step 3</span>
+            <strong>Upload JSONL predictions for the relevant held-out split</strong>
+          </div>
+          <div>
+            <span class="fact-label">Step 4</span>
+            <strong>Report official evaluator results in the system paper</strong>
+          </div>
+        </div>
+
+        <h3>Official Evaluator Tasks</h3>
+        <ul class="paper-checklist">
+          <li><strong>GoldenViewVQA:</strong> submit the dataset <code>test</code> split to the evaluator task named <code>goldenviewvqa</code>.</li>
+          <li><strong>LitTraceQA required track:</strong> submit the dataset <code>test</code> split to <code>littraceqa-test</code>.</li>
+          <li><strong>LitTraceQA optional diagnostic track:</strong> submit <code>test-extra</code> to <code>littraceqa-test-extra</code>. This is recommended but not required for shared-task participation.</li>
+        </ul>
+
+        <h3>Submission Rules</h3>
+        <ul class="paper-checklist">
+          <li>Each Hugging Face account, email address, and team name can be registered only once; registration is not editable after submission.</li>
+          <li>Each registered account may submit up to five times per evaluator task per day. The three evaluator tasks have separate daily limits, counted by the evaluator server day in America/Toronto time.</li>
+          <li>Files that fail sanity checks, such as malformed JSONL, missing required ids, duplicate ids, or unexpected ids, do not count toward the daily limit.</li>
+          <li>The leaderboard is separated by task and displays the best successful submission for each team. Contact emails are collected for organizers and are not shown on the leaderboard.</li>
+          <li>Use exactly the same team name on the evaluator, in the system paper title/results, and in the OpenReview <code>teamname</code> field.</li>
+        </ul>
+
+        <div class="resource-links">
+          <a class="btn btn-primary" href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval">Open Online Evaluator</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA">GoldenViewVQA Dataset</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">LitTraceQA Dataset</a>
+          <a class="btn btn-light" href="#" data-discord-url>Discord Q&amp;A</a>
+        </div>
+      </div>
+    </section>
+
     <section id="shared-task-dates">
       <div class="section-header">
         <div class="section-label">Timeline</div>
@@ -162,7 +219,7 @@
           </tr>
           <tr>
             <td data-label="Activity">Submission of test output, code, and system papers</td>
-            <td class="date-col">August 19, 2026</td>
+            <td class="date-col">August 19, 2026, AoE</td>
           </tr>
           <tr>
             <td data-label="Activity">Acceptance and winner announcement</td>
@@ -219,7 +276,7 @@
           <li><strong>Abstract and introduction:</strong> summarize the task, system, main methods, and key results.</li>
           <li><strong>Data and preprocessing:</strong> describe the released data, input processing, prompts, augmentation, and any external resources.</li>
           <li><strong>System architecture and training:</strong> report models, retrieval or grounding pipelines, prompting strategies, fine-tuning methods, checkpoints, hyperparameters, frameworks, and compute resources.</li>
-          <li><strong>Experimental results:</strong> include official test-set results from the online evaluator, development-set results where relevant, submitted-run comparisons, model variants, and ablations when available.</li>
+          <li><strong>Experimental results:</strong> include official test-set results from the online evaluator, all reported leaderboard metrics for each submitted task, development-set results where relevant, submitted-run comparisons, model variants, and ablations when available.</li>
           <li><strong>Error analysis:</strong> discuss representative failures, difficult examples, grounding errors, retrieval mistakes, evidence-selection issues, and differences between development and test performance.</li>
           <li><strong>Conclusion, limitations, and ethics:</strong> summarize findings, future work, known limitations, and responsible-use considerations for grounded multimodal or literature-grounded systems.</li>
         </ul>
@@ -234,7 +291,8 @@
           results in the system paper, and filling the <code>teamname</code> field in OpenReview.
           Teams participating in both GoldenViewVQA and LitTraceQA are encouraged to describe both
           systems in a single paper. Final shared-task submissions should include the paper PDF,
-          test-output files, code or reproducibility materials, all external data and models used,
+          the JSONL test-output files uploaded to the evaluator, code or reproducibility materials,
+          all external data and models used,
           and the information needed by the organizers for the shared-task overview paper.
         </p>
 
