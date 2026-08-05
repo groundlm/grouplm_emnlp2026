@@ -484,6 +484,25 @@ h2 {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
+.shared-task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+.shared-task-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.btn-evaluator {
+  background: var(--gold);
+  box-shadow: 0 4px 14px rgba(200,149,42,0.25);
+}
+.btn-evaluator:hover {
+  background: #b58425;
+  box-shadow: 0 5px 16px rgba(200,149,42,0.38);
+}
 .task-summary-card h3,
 .task-detail h3 {
   font-family: var(--serif);
