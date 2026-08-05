@@ -55,6 +55,7 @@ function renderHero() {
       <a href="${SITE.openreviewUrl}" class="btn btn-outline is-past-link">Track 1 Submission</a>
       <a href="${SITE.arrCommitmentOpenreviewUrl}" class="btn btn-outline">Track 2 ARR Commitment</a>
       <a href="${SITE.reviewerFormUrl}" class="btn btn-outline">Reviewer / AC Self-Nomination</a>
+      <a href="${SITE.discordUrl}" class="btn btn-outline">Discord Q&amp;A</a>
       <a href="#dates" class="btn btn-outline">Paper Submission Dates</a>
     </div>`;
 }
@@ -154,6 +155,9 @@ function renderContactLinks() {
   });
   document.querySelectorAll('[data-shared-tasks-openreview-url]').forEach(el => {
     el.href = SITE.sharedTasksOpenreviewUrl;
+  });
+  document.querySelectorAll('[data-discord-url]').forEach(el => {
+    el.href = SITE.discordUrl;
   });
   document.querySelectorAll('[data-reviewer-form-url]').forEach(el => {
     el.href = SITE.reviewerFormUrl;

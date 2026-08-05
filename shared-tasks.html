@@ -48,13 +48,15 @@
       <h1>Shared Tasks</h1>
       <p>
         GroundLM 2026 will host shared tasks that turn grounding challenges into concrete,
-        reproducible evaluations. Paper submissions remain the primary focus of the main workshop;
-        this page collects shared-task information, datasets, and participation details.
+        reproducible evaluations. The public datasets, input-only test sets, and online evaluator
+        are now available; this page collects shared-task information, datasets, and participation details.
       </p>
       <div class="hero-ctas">
-        <a href="#goldenviewvqa" class="btn btn-primary">GoldenViewVQA</a>
-        <a href="#littraceqa" class="btn btn-primary">LitTraceQA</a>
-        <a href="#" data-shared-tasks-openreview-url class="btn btn-outline">Shared Tasks Submission</a>
+        <a href="#goldenviewvqa" class="btn btn-outline">GoldenViewVQA</a>
+        <a href="#littraceqa" class="btn btn-outline">LitTraceQA</a>
+        <a href="#system-papers" class="btn btn-primary">Paper Instructions</a>
+        <a href="#" data-shared-tasks-openreview-url class="btn btn-primary">Shared Tasks Submission</a>
+        <a href="#" data-discord-url class="btn btn-outline">Discord Q&amp;A</a>
       </div>
     </div>
   </div>
@@ -70,6 +72,8 @@
           Shared tasks are intended to complement the workshop CFP by giving participants a common
           evaluation setup for grounded language-model behavior. Each task will provide public
           development material, submission-format guidance, and held-out evaluation data for final ranking.
+          Participants can ask questions in the
+          <a href="#" data-discord-url>GroundLM Discord</a>.
         </p>
       </div>
       <div class="task-grid">
@@ -97,7 +101,8 @@
           </div>
           <div class="resource-links">
             <a class="btn btn-primary" href="#goldenviewvqa">View Task</a>
-            <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">Dataset</a>
+            <a class="btn btn-light" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA">Dataset</a>
+            <a class="btn btn-light" href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval">Evaluator</a>
           </div>
         </div>
         <div class="task-summary-card">
@@ -125,6 +130,7 @@
           <div class="resource-links">
             <a class="btn btn-primary" href="#littraceqa">View Task</a>
             <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">Dataset</a>
+            <a class="btn btn-light" href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval">Evaluator</a>
           </div>
         </div>
       </div>
@@ -136,7 +142,9 @@
         <h2>Shared Task Dates</h2>
       </div>
       <p class="note" style="margin-bottom:20px;">
-        The schedule below applies to the GroundLM 2026 shared tasks.
+        The schedule below applies to the GroundLM 2026 shared tasks. The input-only test sets and
+        online evaluator are available now. Participants may submit to the evaluator up to five
+        times per task per day.
       </p>
       <table class="dates-table">
         <thead>
@@ -149,7 +157,7 @@
           </tr>
           <tr>
             <td data-label="Activity">Dataset (test) release</td>
-            <td class="date-col">August 3, 2026</td>
+            <td class="date-col">Released August 5, 2026</td>
           </tr>
           <tr>
             <td data-label="Activity">Submission of test output, code, and system papers</td>
@@ -165,6 +173,83 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section id="system-papers">
+      <div class="section-header">
+        <div class="section-label">Final Submission</div>
+        <h2>Final System Paper Submission Instructions</h2>
+      </div>
+
+      <div class="system-paper-detail">
+        <p>
+          Participants in the GroundLM 2026 shared tasks are invited to submit final system
+          description papers together with their test outputs and code. These papers should document
+          the submitted system, experimental setup, official results, and lessons learned during
+          participation. Papers are welcome regardless of leaderboard position, including submissions
+          that focus on negative results, limitations, or detailed error analysis.
+        </p>
+        <p>
+          Participants are encouraged to begin drafting the system description before the test-set
+          release, then update the official results and analysis after evaluation.
+        </p>
+
+        <div class="task-facts">
+          <div>
+            <span class="fact-label">Who may submit</span>
+            <strong>Teams participating in one or both shared tasks</strong>
+          </div>
+          <div>
+            <span class="fact-label">Submission due</span>
+            <strong>August 19, 2026, AoE</strong>
+          </div>
+          <div>
+            <span class="fact-label">Paper length</span>
+            <strong>4-8 pages of main content, plus references</strong>
+          </div>
+          <div>
+            <span class="fact-label">Format</span>
+            <strong>Official ACL two-column style</strong>
+          </div>
+        </div>
+
+        <h3>Recommended Content</h3>
+        <ul class="paper-checklist">
+          <li><strong>Abstract and introduction:</strong> summarize the task, system, main methods, and key results.</li>
+          <li><strong>Data and preprocessing:</strong> describe the released data, input processing, prompts, augmentation, and any external resources.</li>
+          <li><strong>System architecture and training:</strong> report models, retrieval or grounding pipelines, prompting strategies, fine-tuning methods, checkpoints, hyperparameters, frameworks, and compute resources.</li>
+          <li><strong>Experimental results:</strong> include official test-set results, development-set results where relevant, submitted-run comparisons, model variants, and ablations when available.</li>
+          <li><strong>Error analysis:</strong> discuss representative failures, difficult examples, grounding errors, retrieval mistakes, evidence-selection issues, and differences between development and test performance.</li>
+          <li><strong>Conclusion, limitations, and ethics:</strong> summarize findings, future work, known limitations, and responsible-use considerations for grounded multimodal or literature-grounded systems.</li>
+        </ul>
+
+        <h3>Title and Submission Materials</h3>
+        <p>
+          The paper title should use the team name from the shared-task submission, for example:
+        </p>
+        <pre class="code-sample"><code>&lt;Team Name&gt; at GroundLM 2026 Shared Tasks: &lt;Paper Title&gt;</code></pre>
+        <p>
+          Teams participating in both GoldenViewVQA and LitTraceQA are encouraged to describe both
+          systems in a single paper. Final shared-task submissions should include the paper PDF,
+          test-output files, code or reproducibility materials, all external data and models used,
+          and the information needed by the organizers for the shared-task overview paper.
+        </p>
+
+        <h3>Before Submitting</h3>
+        <ul class="paper-checklist compact">
+          <li>Use the official ACL style files without modifying margins, spacing, fonts, or page dimensions.</li>
+          <li>Keep the system description paper within 4-8 pages of main content; references may use additional pages.</li>
+          <li>Include author names, affiliations, and contact information in the final system paper.</li>
+          <li>Clearly disclose external datasets, pretrained models, tools, APIs, and generated or synthetic data.</li>
+          <li>Confirm that the submitted PDF opens correctly and that tables, figures, and links render as intended.</li>
+        </ul>
+
+        <div class="resource-links">
+          <a class="btn btn-primary" href="#" data-shared-tasks-openreview-url>Submit System Paper</a>
+          <a class="btn btn-light" href="https://github.com/acl-org/acl-style-files">ACL Style Files</a>
+          <a class="btn btn-light" href="https://github.com/acl-org/aclpubcheck">ACL PubCheck</a>
+        </div>
+      </div>
     </section>
 
     <section id="goldenviewvqa">
@@ -206,23 +291,27 @@
         </p>
         <pre class="code-sample"><code>{"question_id": "sfall_0001_causality", "predicted_view": "CAM_FRONT", "predicted_answer_id": "A"}</code></pre>
         <p>
-          The development evaluator reports view accuracy, answer accuracy, and joint accuracy.
-          Final ranking will use a held-out input-only test set with private gold labels.
+          The development evaluator reports micro and macro view accuracy, answer accuracy, and joint accuracy.
+          The official online evaluator is now available for the held-out input-only test set with
+          private gold labels. For GoldenViewVQA, submit to the <code>test</code> split.
         </p>
 
-        <h3>Development Release</h3>
+        <h3>Dataset and Test Release</h3>
         <p>
-          The current Hugging Face release is the public development set. It is intended for task
+          The Hugging Face dataset contains the public development data and the input-only
+          <code>test</code> split for official evaluation. Use the development split for task
           familiarization, data loading, prompt and model development, local evaluation, and
-          submission-format checks. It should not be treated as the final leaderboard test set.
+          submission-format checks; use the test split for leaderboard submissions.
         </p>
 
         <h3>Resources</h3>
         <div class="resource-links">
           <a class="btn btn-primary" href="#" data-shared-tasks-openreview-url>Submit to Shared Tasks</a>
-          <a class="btn btn-primary" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">Dataset on Hugging Face</a>
-          <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA/blob/main/docs/schema.md">Schema</a>
-          <a class="btn btn-light" href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA/blob/main/scripts/evaluate.py">Evaluator</a>
+          <a class="btn btn-primary" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA">Dataset on Hugging Face</a>
+          <a class="btn btn-primary" href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval">Online Evaluator</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA/blob/main/schema/submission.schema.json">Schema</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA/blob/main/scripts/evaluate.py">Evaluator</a>
+          <a class="btn btn-light" href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA/blob/main/scripts/submission_validation.py">Validator</a>
         </div>
 
         <p class="note">
@@ -273,21 +362,25 @@
         <p>
           The public evaluator reports macro paper retrieval precision, recall, and F1; macro
           evidence precision, recall, and F1 using coarse evidence matches; and answer metrics for
-          multiple-choice, freeform, and table outputs. Final ranking will use a hidden evaluation set.
+          multiple-choice, freeform, and table outputs. The official online evaluator is now
+          available for the hidden test labels.
         </p>
 
-        <h3>Development Release</h3>
+        <h3>Dataset and Test Release</h3>
         <p>
-          The current Hugging Face release is the public development set. It includes gold validation
-          records, input-only validation records, a sample submission, a searchable paper metadata pool,
-          a machine-readable schema, and a local evaluator. It is intended for format inspection,
-          loader development, prompt tuning, and local validation, not as the hidden leaderboard test set.
+          The Hugging Face dataset includes gold validation records, input-only validation records,
+          input-only test records, input-only test-extra records, sample submissions, a searchable
+          paper metadata pool, a machine-readable schema, and a local evaluator.
+          The <code>test</code> split is required for LitTraceQA shared-task participation.
+          The <code>test-extra</code> split is recommended for additional diagnostic evaluation,
+          but it is not required.
         </p>
 
         <h3>Resources</h3>
         <div class="resource-links">
           <a class="btn btn-primary" href="#" data-shared-tasks-openreview-url>Submit to Shared Tasks</a>
           <a class="btn btn-primary" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">Dataset on Hugging Face</a>
+          <a class="btn btn-primary" href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval">Online Evaluator</a>
           <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/docs/format.md">Format</a>
           <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/docs/evaluation.md">Evaluation</a>
           <a class="btn btn-light" href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA/blob/main/scripts/evaluate.py">Evaluator</a>
@@ -327,7 +420,8 @@
           <li><a href="#" data-openreview-url>Track 1 OpenReview Submission</a></li>
           <li><a href="#" data-arr-openreview-url>Track 2 ARR Commitment Submission</a></li>
           <li><a href="#" data-shared-tasks-openreview-url>Shared Tasks OpenReview Submission</a></li>
-          <li><a href="https://huggingface.co/datasets/YimuWang/GoldenViewVQA">GoldenViewVQA Dataset</a></li>
+          <li><a href="#" data-discord-url>Discord Q&amp;A</a></li>
+          <li><a href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA">GoldenViewVQA Dataset</a></li>
           <li><a href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA">LitTraceQA Dataset</a></li>
           <li><a href="#" data-emnlp-url>EMNLP 2026</a></li>
           <li><a href="https://aclanthology.org/">ACL Anthology</a></li>
@@ -340,6 +434,13 @@
     </div>
   </footer>
 
+  <script>
+    SITE.announcement = {
+      text: "Shared task update — input-only test sets and the online evaluator are available now; final test outputs, code, and system papers are due <strong>2026-08-19 (AoE)</strong>.",
+      linkText: "Open evaluator ↗",
+      linkHref: "https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval",
+    };
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
