@@ -49,7 +49,8 @@
       <p>
         GroundLM 2026 will host shared tasks that turn grounding challenges into concrete,
         reproducible evaluations. The public datasets, input-only test sets, and online evaluator
-        are now available; this page collects shared-task information, datasets, and participation details.
+        are now available. Participants should register their team on the evaluator Space, submit
+        held-out predictions there, and report the official results in their system paper.
       </p>
       <div class="hero-ctas">
         <a href="#goldenviewvqa" class="btn btn-outline">GoldenViewVQA</a>
@@ -143,8 +144,8 @@
       </div>
       <p class="note" style="margin-bottom:20px;">
         The schedule below applies to the GroundLM 2026 shared tasks. The input-only test sets and
-        online evaluator are available now. Participants may submit to the evaluator up to five
-        times per task per day.
+        online evaluator are available now. Participants should sign in to the evaluator Space,
+        register a team, and may submit up to five times per task per day.
       </p>
       <table class="dates-table">
         <thead>
@@ -218,7 +219,7 @@
           <li><strong>Abstract and introduction:</strong> summarize the task, system, main methods, and key results.</li>
           <li><strong>Data and preprocessing:</strong> describe the released data, input processing, prompts, augmentation, and any external resources.</li>
           <li><strong>System architecture and training:</strong> report models, retrieval or grounding pipelines, prompting strategies, fine-tuning methods, checkpoints, hyperparameters, frameworks, and compute resources.</li>
-          <li><strong>Experimental results:</strong> include official test-set results, development-set results where relevant, submitted-run comparisons, model variants, and ablations when available.</li>
+          <li><strong>Experimental results:</strong> include official test-set results from the online evaluator, development-set results where relevant, submitted-run comparisons, model variants, and ablations when available.</li>
           <li><strong>Error analysis:</strong> discuss representative failures, difficult examples, grounding errors, retrieval mistakes, evidence-selection issues, and differences between development and test performance.</li>
           <li><strong>Conclusion, limitations, and ethics:</strong> summarize findings, future work, known limitations, and responsible-use considerations for grounded multimodal or literature-grounded systems.</li>
         </ul>
@@ -229,6 +230,8 @@
         </p>
         <pre class="code-sample"><code>&lt;Team Name&gt; at GroundLM 2026 Shared Tasks: &lt;Paper Title&gt;</code></pre>
         <p>
+          Use the same team name when registering on the evaluator Space, reporting leaderboard
+          results in the system paper, and filling the <code>teamname</code> field in OpenReview.
           Teams participating in both GoldenViewVQA and LitTraceQA are encouraged to describe both
           systems in a single paper. Final shared-task submissions should include the paper PDF,
           test-output files, code or reproducibility materials, all external data and models used,
@@ -293,7 +296,8 @@
         <p>
           The development evaluator reports micro and macro view accuracy, answer accuracy, and joint accuracy.
           The official online evaluator is now available for the held-out input-only test set with
-          private gold labels. For GoldenViewVQA, submit to the <code>test</code> split.
+          private gold labels. For GoldenViewVQA, submit predictions for the <code>test</code>
+          split through the evaluator Space after registering your team.
         </p>
 
         <h3>Dataset and Test Release</h3>
@@ -363,7 +367,9 @@
           The public evaluator reports macro paper retrieval precision, recall, and F1; macro
           evidence precision, recall, and F1 using coarse evidence matches; and answer metrics for
           multiple-choice, freeform, and table outputs. The official online evaluator is now
-          available for the hidden test labels.
+          available for the hidden test labels. Register your team on the evaluator Space, submit
+          the required <code>test</code> split there, and optionally submit <code>test-extra</code>
+          for additional diagnostic results.
         </p>
 
         <h3>Dataset and Test Release</h3>
@@ -373,7 +379,8 @@
           paper metadata pool, a machine-readable schema, and a local evaluator.
           The <code>test</code> split is required for LitTraceQA shared-task participation.
           The <code>test-extra</code> split is recommended for additional diagnostic evaluation,
-          but it is not required.
+          but it is not required. Official scores for both splits are produced by the online
+          evaluator Space.
         </p>
 
         <h3>Resources</h3>
