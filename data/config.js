@@ -72,6 +72,22 @@ const SPEAKERS = [
     url: "https://uwaterloo.ca/electrical-computer-engineering/profile/k2czarne",
     photo: "img/krzysztof.jpg",
   },
+  {
+    name: "Valentino Maiorca",
+    affiliation: "Institute of Science and Technology Austria (ISTA)",
+    status: "confirmed",
+    bio: "Postdoctoral Researcher at ISTA; works on latent geometry, representation alignment, and controllable neural networks.",
+    url: "https://vale.maiorca.xyz/",
+    photo: null,
+  },
+  {
+    name: "Danae Sánchez",
+    affiliation: "University of Copenhagen",
+    status: "confirmed",
+    bio: "Postdoctoral Researcher at the Center for AI in Society, University of Copenhagen; works on vision-language models, multimodal reasoning, AI safety, and robustness.",
+    url: "https://danaesavi.github.io/",
+    photo: "img/danae_photo.jpg",
+  },
 
 
 ];
