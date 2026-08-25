@@ -87,7 +87,28 @@ function renderDates() {
 function renderSpeakers() {
   const el = document.getElementById('speakers-grid');
   if (!el) return;
-  el.innerHTML = SPEAKERS.map(s => `
+  renderPeople(SPEAKERS, el);
+}
+
+/* ── PANELISTS ── */
+function renderPanelists() {
+  const el = document.getElementById('panelists-grid');
+  if (!el) return;
+  renderPeople(PANELISTS, el);
+}
+
+/* ── SPONSORS ── */
+function renderSponsors() {
+  const el = document.getElementById('sponsors-grid');
+  if (!el) return;
+  el.innerHTML = SPONSORS.map(s => `
+    <div class="sponsor-card">
+      ${s.url ? `<a href="${s.url}">${s.name}</a>` : s.name}
+    </div>`).join('');
+}
+
+function renderPeople(people, el) {
+  el.innerHTML = people.map(s => `
     <div class="speaker-card">
       ${avatar(s, 'md')}
       <h3>${s.url && s.url !== '#'
@@ -194,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTopics();
   renderDates();
   renderSpeakers();
+  renderPanelists();
+  renderSponsors();
   renderOrganizers();
   renderProgram();
   renderFaq();

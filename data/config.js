@@ -16,9 +16,9 @@ const SITE = {
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
   announcement: {
-    text: "Next deadline — Track 2 ARR commitments due <strong>2026-08-05 (AoE)</strong>.",
-    linkText: "Read CFP ↗",
-    linkHref: "#cfp",
+    text: "Next: release decision on <strong>2026-08-29</strong>.",
+    linkText: "View important dates ↗",
+    linkHref: "#dates",
   },
 
   hero: {
@@ -36,10 +36,10 @@ const SITE = {
  */
 const DATES = [
   { label: "Track 1: Direct submission deadline", date: "2026-07-07", badge: "past" },
-  { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: "upcoming" },
-  { label: "Notification of acceptance",          date: "Mid August 2026", badge: null },
-  { label: "Camera-ready paper due",              date: "2026-09-06", badge: null },
-  { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: null },
+  { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: "past" },
+  { label: "Acceptance release",                  date: "2026-08-29", badge: "upcoming" },
+  { label: "Camera-ready paper due",              date: "2026-09-06", badge: "upcoming" },
+  { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: "upcoming" },
 ];
 
 /**
@@ -78,7 +78,7 @@ const SPEAKERS = [
     status: "confirmed",
     bio: "Postdoctoral Researcher at ISTA; works on latent geometry, representation alignment, and controllable neural networks.",
     url: "https://vale.maiorca.xyz/",
-    photo: null,
+    photo: "img/valentino-maiorca.jpg",
   },
   {
     name: "Danae Sánchez",
@@ -90,6 +90,34 @@ const SPEAKERS = [
   },
 
 
+];
+
+/**
+ * Panelists. Each entry: { name, affiliation, status, bio, url, photo }
+ */
+const PANELISTS = [
+  {
+    name: "Carolin Lawrence",
+    affiliation: "NEC Laboratories Europe",
+    status: "confirmed",
+    bio: "Chief Research Scientist at NEC Laboratories Europe; works on making GenAI interpretable, trustworthy and reliable.",
+    url: null,
+    photo: "img/carolin-lawrence.jpg",
+  },
+  {
+    name: "Amin Shabani",
+    affiliation: "RBC Borealis",
+    status: "confirmed",
+    bio: "Senior Machine Learning Researcher at RBC Borealis, where he develops advanced models for financial applications. He holds a Ph.D. in Computer Science from Simon Fraser University and an M.Sc. from Seoul National University. His research focuses on the intersection of generative models, large language models, and time-series forecasting. He has published at ICLR, NeurIPS, and CVPR, and previously worked as a Research Scientist Intern at Adobe on automated layout design.",
+    url: null,
+    photo: "img/amin-shabani.jpg",
+  },
+];
+
+/** Sponsors. Each entry: { name, url } */
+const SPONSORS = [
+  { name: "Tencent", url: null },
+  { name: "RBC Borealis", url: null },
 ];
 
 /**
@@ -120,7 +148,7 @@ const PROGRAM = [
   { time: "14:45", title: "Invited Talk 4",                               speaker: "Speaker TBD",             type: "talk"   },
   { time: "15:30", title: "☕ Coffee Break",                              speaker: null,                      type: "break"  },
   { time: "15:45", title: "Poster Session",                               speaker: "All accepted papers",     type: "poster" },
-  { time: "16:45", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Invited speakers + moderator", type: "panel" },
+  { time: "16:45", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Amin Shabani, Carolin Lawrence, invited speakers + moderator", type: "panel" },
   { time: "17:15", title: "Closing Remarks + Best Paper Award",           speaker: "Organizing Committee",    type: "talk"   },
   { time: "17:30", title: "End of Workshop",                              speaker: null,                      type: "break"  },
 ];
