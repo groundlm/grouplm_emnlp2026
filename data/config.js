@@ -16,7 +16,7 @@ const SITE = {
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
   announcement: {
-    text: "Next: release decision on <strong>2026-08-29</strong>.",
+    text: "Camera-ready paper instructions will be released on <strong>2026-09-03 (AoE)</strong>. Stay tuned!",
     linkText: "View important dates ↗",
     linkHref: "#dates",
   },
@@ -37,8 +37,8 @@ const SITE = {
 const DATES = [
   { label: "Track 1: Direct submission deadline", date: "2026-07-07", badge: "past" },
   { label: "Track 2: ARR commitment deadline",    date: "2026-08-05", badge: "past" },
-  { label: "Acceptance release",                  date: "2026-08-29", badge: "upcoming" },
-  { label: "Camera-ready paper due",              date: "2026-09-06", badge: "upcoming" },
+  { label: "Acceptance release",                  date: "2026-08-29", badge: "past" },
+  { label: "Camera-ready paper due",              date: "2026-09-12", badge: "upcoming" },
   { label: "Workshop date",                      date: "2026-10-29, 9:00-17:30", badge: "upcoming" },
 ];
 
