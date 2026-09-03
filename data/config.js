@@ -88,6 +88,30 @@ const SPEAKERS = [
     url: "https://danaesavi.github.io/",
     photo: "img/danae_photo.jpg",
   },
+  {
+    name: "Anya Belz",
+    affiliation: "Dublin City University",
+    status: "confirmed",
+    bio: "Full Professor of Computer Science (Natural Language Processing) at Dublin City University; works on natural language generation, NLP evaluation, text analysis, and image description.",
+    url: "https://www.dcu.ie/computing/people/anya-belz",
+    photo: "img/anya-belz.jpg",
+  },
+  {
+    name: "Iryna Gurevych",
+    affiliation: "Technical University of Darmstadt",
+    status: "confirmed",
+    bio: "Full Professor at the Technical University of Darmstadt and head of the UKP Lab; works on information extraction, semantic text processing, machine learning, and NLP applications in the social sciences and humanities.",
+    url: "https://www.informatik.tu-darmstadt.de/ukp/ukp_home/head_ukp/index.en.jsp",
+    photo: "img/iryna-gurevych.png",
+  },
+  {
+    name: "Ivan Titov",
+    affiliation: "University of Edinburgh",
+    status: "confirmed",
+    bio: "Personal Chair of Natural Language Processing at the University of Edinburgh's School of Informatics and member of the Institute for Language, Cognition and Computation.",
+    url: "https://people.inf.ed.ac.uk/Ivan_Titov.html",
+    photo: "img/ivan-titov.gif",
+  },
 
 
 ];
