@@ -11,7 +11,7 @@ const SITE = {
   openreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM",
   arrCommitmentOpenreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_ARR_Commitment",
   sharedTasksOpenreviewUrl: "https://openreview.net/group?id=EMNLP/2026/Workshop/GroundLM_Shared_Tasks",
-  discordUrl: "https://discord.gg/qY8Agahbn",
+  discordUrl: "https://discord.gg/G2CCujHAv",
   reviewerFormUrl: "https://forms.gle/PMB4cfb1p32exSB19",
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
