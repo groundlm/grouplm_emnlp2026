@@ -16,9 +16,9 @@ const SITE = {
   emnlpUrl: "https://2026.emnlp.org/",      // Replace with EMNLP 2026 URL
 
   announcement: {
-    text: "Camera-ready paper instructions will be released on <strong>2026-09-03 (AoE)</strong>. Stay tuned!",
-    linkText: "View important dates ↗",
-    linkHref: "#dates",
+    text: "Camera-ready instructions are now available. Papers are due <strong>September 12, 2026 (AoE)</strong>.",
+    linkText: "View camera-ready instructions ↗",
+    linkHref: "camera-ready.html",
   },
 
   hero: {
@@ -112,6 +112,14 @@ const SPEAKERS = [
     url: "https://people.inf.ed.ac.uk/Ivan_Titov.html",
     photo: "img/ivan-titov.gif",
   },
+  {
+    name: "Sina Zarrieß",
+    affiliation: "University of Bielefeld",
+    status: "confirmed",
+    bio: "Professor of Computational Linguistics at the University of Bielefeld; works on language generation and understanding, visual language grounding, reference, pragmatics, dialogue, and the use of context in language models.",
+    url: "https://clause-bielefeld.github.io/",
+    photo: "img/sina-zarriess.jpg",
+  },
 
 
 ];
@@ -120,6 +128,14 @@ const SPEAKERS = [
  * Panelists. Each entry: { name, affiliation, status, bio, url, photo }
  */
 const PANELISTS = [
+  {
+    name: "Sina Zarrieß",
+    affiliation: "University of Bielefeld",
+    status: "confirmed",
+    bio: "Professor of Computational Linguistics at the University of Bielefeld; works on language generation and understanding, visual language grounding, reference, pragmatics, dialogue, and the use of context in language models.",
+    url: "https://clause-bielefeld.github.io/",
+    photo: "img/sina-zarriess.jpg",
+  },
   {
     name: "Carolin Lawrence",
     affiliation: "NEC Laboratories Europe",
@@ -135,6 +151,14 @@ const PANELISTS = [
     bio: "Senior Machine Learning Researcher at RBC Borealis, where he develops advanced models for financial applications. He holds a Ph.D. in Computer Science from Simon Fraser University and an M.Sc. from Seoul National University. His research focuses on the intersection of generative models, large language models, and time-series forecasting. He has published at ICLR, NeurIPS, and CVPR, and previously worked as a Research Scientist Intern at Adobe on automated layout design.",
     url: null,
     photo: "img/amin-shabani.jpg",
+  },
+  {
+    name: "Dirk Hovy",
+    affiliation: "Bocconi University",
+    status: "confirmed",
+    bio: "Professor in the Computing Sciences Department at Bocconi University; Dean for Digital Transformation and AI and Scientific Director of the Data and Marketing Insights Unit. His work spans fairness, bias, accountable NLP, and the societal impact of language technology.",
+    url: "https://www.dirkhovy.com/",
+    photo: "img/dirk-hovy.jpg",
   },
 ];
 
@@ -175,7 +199,7 @@ const PROGRAM = [
   { time: "15:00", title: "☕ Coffee Break",                              speaker: null,                      type: "break"  },
   { time: "15:20", title: "Invited Talk 8",                               speaker: "Speaker TBD",             type: "talk"   },
   { time: "16:00", title: "Invited Talk 9",                               speaker: "Speaker TBD",             type: "talk"   },
-  { time: "16:40", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Amin Shabani, Carolin Lawrence, invited speakers + moderator", type: "panel" },
+  { time: "16:40", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Sina Zarrieß, invited speakers + moderator", type: "panel" },
   { time: "17:25", title: "Closing Remarks",                              speaker: "Organizing Committee",    type: "talk"   },
   { time: "17:30", title: "End of Workshop",                              speaker: null,                      type: "break"  },
 ];
