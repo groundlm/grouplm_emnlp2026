@@ -160,6 +160,14 @@ const PANELISTS = [
     url: "https://www.dirkhovy.com/",
     photo: "img/dirk-hovy.jpg",
   },
+  {
+    name: "Krisztian Balog",
+    affiliation: "University of Stavanger",
+    status: "confirmed",
+    bio: "Professor of Computer Science at the University of Stavanger and Staff Research Scientist at Google DeepMind; works on information retrieval, conversational information access, transparent AI, and evaluation methodology.",
+    url: "https://krisztianbalog.com",
+    photo: "img/krisztian-balog.jpg",
+  },
 ];
 
 /** Sponsors. Each entry: { name, url } */
@@ -199,7 +207,7 @@ const PROGRAM = [
   { time: "15:00", title: "☕ Coffee Break",                              speaker: null,                      type: "break"  },
   { time: "15:20", title: "Invited Talk 8",                               speaker: "Speaker TBD",             type: "talk"   },
   { time: "16:00", title: "Invited Talk 9",                               speaker: "Speaker TBD",             type: "talk"   },
-  { time: "16:40", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Sina Zarrieß, invited speakers + moderator", type: "panel" },
+  { time: "16:40", title: "Panel Discussion: Open Challenges in Grounding", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Krisztian Balog, Sina Zarrieß, invited speakers + moderator", type: "panel" },
   { time: "17:25", title: "Closing Remarks",                              speaker: "Organizing Committee",    type: "talk"   },
   { time: "17:30", title: "End of Workshop",                              speaker: null,                      type: "break"  },
 ];
