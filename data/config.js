@@ -162,7 +162,7 @@ const PANELISTS = [
   },
   {
     name: "Krisztian Balog",
-    affiliation: "University of Stavanger",
+    affiliation: "University of Stavanger, Google DeepMind",
     status: "confirmed",
     bio: "Professor of Computer Science at the University of Stavanger and Staff Research Scientist at Google DeepMind; works on information retrieval, conversational information access, transparent AI, and evaluation methodology.",
     url: "https://krisztianbalog.com",
