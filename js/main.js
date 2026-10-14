@@ -144,6 +144,7 @@ function renderProgram() {
       <div class="program-event">
         <strong>${p.title}</strong>
         ${p.speaker ? `<div class="speaker-tag">${p.speaker}</div>` : ''}
+        ${p.abstract ? `<div class="talk-abstract">${p.abstract}</div>` : ''}
       </div>
     </div>`).join('');
 }

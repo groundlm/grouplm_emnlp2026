@@ -417,6 +417,7 @@ h2 {
 }
 .program-event strong { color: var(--navy); }
 .program-event .speaker-tag { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.program-event .talk-abstract { font-size: 0.76rem; line-height: 1.45; color: var(--text-muted); margin-top: 8px; max-width: 900px; }
 .type-talk   .program-event { border-left-color: var(--accent); }
 .type-break  .program-event { border-left-color: var(--border); background: var(--bg); color: var(--text-muted); }
 .type-panel  .program-event { border-left-color: var(--gold); }
