@@ -49,14 +49,6 @@ const DATES = [
  */
 const SPEAKERS = [
   {
-    name: "Freda Shi",
-    affiliation: "University of Waterloo, Vector Institute",
-    status: "confirmed",
-    bio: "Assistant Professor at the University of Waterloo and Faculty Member at the Vector Institute; works on computational linguistics and natural language processing.",
-    url: "https://cs.uwaterloo.ca/~fhs/",
-    photo: "img/freda.jpg",
-  },
-  {
     name: "Lei Li",
     affiliation: "Carnegie Mellon University",
     status: "confirmed",
@@ -198,23 +190,21 @@ const ORGANIZERS = [
  * type: "talk" | "break" | "panel" | "poster"
  */
 const PROGRAM = [
-  { time: "8:30",  title: "Opening Remarks",                                speaker: "Organizing Committee",    type: "talk"   },
-  { time: "9:00",  title: "When Grounding Is Not Optional: Lessons from NLP for Mental Health", speaker: "Iryna Gurevych (online)", type: "talk", abstract: "Language models become fluent long before they become faithful — and in mental health, a system that only sounds grounded can do real harm. Using mental-health NLP as a stress test for grounding, faithfulness, and culture-aware deployment, I show that grounding models in clinical structure is essential; that fluent outputs pass generic automatic judges while failing experts, so faithfulness needs grounded, outcome-anchored evaluation, not surface metrics; and that faithful grounding requires grounded synthetic data. Grounded systems earn trust when they are faithful, verifiable, and culture-aware — not merely convincing." },
-  { time: "9:35",  title: "Invited Talk 2 (30 min + 5 min Q&A)",            speaker: "Danae Sánchez Villegas", type: "talk"   },
-  { time: "10:10", title: "Oral Presentation Session",                      speaker: "Accepted oral presentations", type: "talk" },
-  { time: "10:30", title: "☕ Coffee Break + Poster Session",                speaker: "All accepted papers",     type: "poster" },
-  { time: "11:00", title: "Quantified Reproducibility Assessment for NLP/ML", speaker: "Anya Belz", type: "talk" },
-  { time: "11:35", title: "Invited Talk 4 (30 min + 5 min Q&A)",            speaker: "Speaker TBD",             type: "talk"   },
-  { time: "12:10", title: "Oral Presentation Session",                      speaker: "Accepted oral presentations", type: "talk" },
-  { time: "12:30", title: "🍽 Lunch + Poster Session",                      speaker: "All accepted papers",     type: "poster" },
-  { time: "13:20", title: "Invited Talk 5 (30 min + 5 min Q&A)",            speaker: "Speaker TBD",             type: "talk"   },
-  { time: "13:55", title: "Invited Talk 6 (30 min + 5 min Q&A)",            speaker: "Speaker TBD",             type: "talk"   },
-  { time: "14:30", title: "Invited Talk 7 (25 min + 5 min Q&A)",            speaker: "Freda Shi",               type: "talk"   },
-  { time: "15:00", title: "Invited Talk 8 (25 min + 5 min Q&A)",            speaker: "Ivan Titov",              type: "talk"   },
-  { time: "15:30", title: "Panel Discussion: Open Challenges in Grounding (30 min)", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Krisztian Balog, Sina Zarrieß, invited speakers + moderator", type: "panel" },
-  { time: "16:00", title: "Evaluation in the Face of Deceptively Fluent Models - Moving from Text to Interaction Quality", speaker: "Sina Zarrieß", type: "talk", abstract: "Evaluation has always been a notorious challenge in NLG and NLP research. The rise of LLMs, however, poses even harder problems that are more fundamental than those raised by earlier task-specific systems. Put simply: the texts produced by today's models are extraordinarily fluent. This does not mean they are error-free or fit for every real-world purpose — but their surface polish makes it difficult to detect and diagnose underlying deficiencies, even for trained human evaluators. In this talk, I argue that this situation demands a new evaluation paradigm — one that shifts focus from text quality to interaction quality. Rather than asking how good a generated text is in isolation, we should ask whether and to what extent a system enables meaningful, reliable, and predictable interactions with users, bringing user intentions, grounding and human-model interaction dynamics to the focus of evaluation. I will present recent work from my group that illustrates how interaction-oriented evaluation protocols can be implemented in controlled settings, and discuss how LLMs-as-a-judge could play a role in this paradigm." },
-  { time: "17:15", title: "Closing Remarks",                                speaker: "Organizing Committee",    type: "talk"   },
-  { time: "17:30", title: "End of Workshop",                                speaker: null,                      type: "break"  },
+  { time: "8:30",  title: "Opening Remarks",                                speaker: "Organizing Committee",    type: "talk", filterGroup: "all-only" },
+  { time: "9:00",  title: "When Grounding Is Not Optional: Lessons from NLP for Mental Health", speaker: "Iryna Gurevych (online)", type: "talk", filterGroup: "talks-panel", abstract: "Language models become fluent long before they become faithful — and in mental health, a system that only sounds grounded can do real harm. Using mental-health NLP as a stress test for grounding, faithfulness, and culture-aware deployment, I show that grounding models in clinical structure is essential; that fluent outputs pass generic automatic judges while failing experts, so faithfulness needs grounded, outcome-anchored evaluation, not surface metrics; and that faithful grounding requires grounded synthetic data. Grounded systems earn trust when they are faithful, verifiable, and culture-aware — not merely convincing." },
+  { time: "9:35",  title: "Invited Talk 2 (30 min + 5 min Q&A)",            speaker: "Danae Sánchez Villegas", type: "talk", filterGroup: "talks-panel" },
+  { time: "10:10", title: "☕ Coffee Break + Poster Session (10:10–11:00)", speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
+  { time: "11:00", title: "Quantified Reproducibility Assessment for NLP/ML", speaker: "Anya Belz", type: "talk", filterGroup: "talks-panel" },
+  { time: "11:35", title: "The Semantic Geometry of Activation Steering", speaker: "Valentino Maiorca (online)", type: "talk", filterGroup: "talks-panel", abstract: "Neural networks often organize their representations semantically, placing related inputs close together and encoding many properties along linear directions. In this talk, I link this emergent geometry directly to activation steering. Steering finds the region of this space that expresses a behavior and pushes activations toward it, at inference time and without touching the weights. In transformer-based models, these regions can be traced to a few attention heads, and to a few directions within each. Concepts have semantic representations too, so the intervention can be predicted from them, and steering toward a new concept takes one forward pass instead of its own optimization. Understanding how a model represents meaning is a direct route to control what it does, and to do so efficiently." },
+  { time: "12:10", title: "🍽 Lunch + Poster Session (12:10–13:00)",        speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
+  { time: "13:00", title: "Oral Presentation Session (8 papers; 60 min)",  speaker: "Accepted oral presentations", type: "talk", filterGroup: "poster-oral" },
+  { time: "14:00", title: "Invited Talk (30 min + 5 min Q&A)",              speaker: "Lei Li",                   type: "talk", filterGroup: "talks-panel" },
+  { time: "15:00", title: "Invited Talk (30 min + 5 min Q&A)",              speaker: "Ivan Titov",              type: "talk", filterGroup: "talks-panel" },
+  { time: "15:30", title: "Panel Discussion: Open Challenges in Grounding (30 min)", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Krisztian Balog, Sina Zarrieß, invited speakers + moderator", type: "panel", filterGroup: "talks-panel" },
+  { time: "16:00", title: "Evaluation in the Face of Deceptively Fluent Models - Moving from Text to Interaction Quality (30 min + 5 min Q&A)", speaker: "Sina Zarrieß", type: "talk", filterGroup: "talks-panel", abstract: "Evaluation has always been a notorious challenge in NLG and NLP research. The rise of LLMs, however, poses even harder problems that are more fundamental than those raised by earlier task-specific systems. Put simply: the texts produced by today's models are extraordinarily fluent. This does not mean they are error-free or fit for every real-world purpose — but their surface polish makes it difficult to detect and diagnose underlying deficiencies, even for trained human evaluators. In this talk, I argue that this situation demands a new evaluation paradigm — one that shifts focus from text quality to interaction quality. Rather than asking how good a generated text is in isolation, we should ask whether and to what extent a system enables meaningful, reliable, and predictable interactions with users, bringing user intentions, grounding and human-model interaction dynamics to the focus of evaluation. I will present recent work from my group that illustrates how interaction-oriented evaluation protocols can be implemented in controlled settings, and discuss how LLMs-as-a-judge could play a role in this paradigm." },
+  { time: "16:35", title: "Closing Remarks (16:35–16:50)",              speaker: "Organizing Committee",    type: "talk", filterGroup: "all-only" },
+  { time: "16:50", title: "Poster Session + Social (16:50–17:30)",       speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
+  { time: "17:30", title: "End of Workshop",                                speaker: null,                      type: "break", filterGroup: "all-only" },
 ];
 
 /**

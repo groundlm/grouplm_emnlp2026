@@ -139,7 +139,7 @@ function renderProgram() {
   const el = document.getElementById('program-rows');
   if (!el) return;
   el.innerHTML = PROGRAM.map(p => `
-    <div class="program-row type-${p.type}">
+    <div class="program-row type-${p.type}" data-filter-group="${p.filterGroup || 'all-only'}">
       <div class="program-time">${p.time}</div>
       <div class="program-event">
         <strong>${p.title}</strong>
@@ -147,6 +147,24 @@ function renderProgram() {
         ${p.abstract ? `<div class="talk-abstract">${p.abstract}</div>` : ''}
       </div>
     </div>`).join('');
+
+  const filters = document.getElementById('program-filters');
+  if (!filters) return;
+  filters.addEventListener('click', event => {
+    const button = event.target.closest('[data-program-filter]');
+    if (!button || !filters.contains(button)) return;
+
+    const selectedFilter = button.dataset.programFilter;
+    filters.querySelectorAll('[data-program-filter]').forEach(filterButton => {
+      const isActive = filterButton === button;
+      filterButton.setAttribute('aria-pressed', String(isActive));
+      filterButton.classList.toggle('is-active', isActive);
+    });
+
+    el.querySelectorAll('.program-row').forEach(row => {
+      row.hidden = selectedFilter !== 'all' && row.dataset.filterGroup !== selectedFilter;
+    });
+  });
 }
 
 /* ── FAQ ── */

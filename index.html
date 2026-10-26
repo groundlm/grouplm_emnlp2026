@@ -317,13 +317,16 @@
         <h2>Program</h2>
       </div>
       <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:28px;max-width:620px;">
-        The detailed program will be available after acceptance notifications (mid August 2026).
-        The schedule below is a tentative outline.
       </p>
       <div>
         <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--border);">
           Workshop Day — October 29, 2026, 9:00-17:30
         </h3>
+        <div class="program-filters" id="program-filters" role="group" aria-label="Filter program schedule">
+          <button class="program-filter" type="button" data-program-filter="talks-panel" aria-pressed="false">Talks / Panel</button>
+          <button class="program-filter" type="button" data-program-filter="poster-oral" aria-pressed="false">Poster / Oral</button>
+          <button class="program-filter is-active" type="button" data-program-filter="all" aria-pressed="true">All</button>
+        </div>
         <div class="program-table" id="program-rows"></div>
       </div>
     </section>

@@ -396,6 +396,33 @@ h2 {
 .organizer-affil { font-size: 0.72rem; color: var(--text-muted); }
 
 /* ── PROGRAM ── */
+.program-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.program-filter {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.program-filter:hover { border-color: var(--accent); }
+.program-filter.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+.program-filter:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
 .program-table {
   background: var(--white);
   border: 1px solid var(--border);
@@ -404,6 +431,7 @@ h2 {
   box-shadow: var(--shadow);
 }
 .program-row { display: grid; grid-template-columns: 110px 1fr; border-bottom: 1px solid var(--border); }
+.program-row[hidden] { display: none; }
 .program-row:last-child { border-bottom: none; }
 .program-time {
   font-family: var(--mono); font-size: 0.78rem; color: var(--accent);
