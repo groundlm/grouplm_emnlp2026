@@ -166,10 +166,10 @@ const PANELISTS = [
   },
 ];
 
-/** Sponsors. Each entry: { name, url } */
+/** Sponsors. Each entry: { name, url, logo } */
 const SPONSORS = [
-  { name: "Tencent", url: null },
-  { name: "RBC Borealis", url: null },
+  { name: "Tencent", url: null, logo: "img/tencent-logo.png" },
+  { name: "RBC Borealis", url: null, logo: "img/rbc-borealis-logo.png" },
 ];
 
 /**
@@ -201,9 +201,10 @@ const PROGRAM = [
   { time: "14:00", title: "Invited Talk (30 min + 5 min Q&A)",              speaker: "Lei Li",                   type: "talk", filterGroup: "talks-panel" },
   { time: "15:00", title: "Invited Talk (30 min + 5 min Q&A)",              speaker: "Ivan Titov",              type: "talk", filterGroup: "talks-panel" },
   { time: "15:30", title: "Panel Discussion: Open Challenges in Grounding (30 min)", speaker: "Amin Shabani, Carolin Lawrence, Dirk Hovy, Krisztian Balog, Sina Zarrieß, invited speakers + moderator", type: "panel", filterGroup: "talks-panel" },
-  { time: "16:00", title: "Evaluation in the Face of Deceptively Fluent Models - Moving from Text to Interaction Quality (30 min + 5 min Q&A)", speaker: "Sina Zarrieß", type: "talk", filterGroup: "talks-panel", abstract: "Evaluation has always been a notorious challenge in NLG and NLP research. The rise of LLMs, however, poses even harder problems that are more fundamental than those raised by earlier task-specific systems. Put simply: the texts produced by today's models are extraordinarily fluent. This does not mean they are error-free or fit for every real-world purpose — but their surface polish makes it difficult to detect and diagnose underlying deficiencies, even for trained human evaluators. In this talk, I argue that this situation demands a new evaluation paradigm — one that shifts focus from text quality to interaction quality. Rather than asking how good a generated text is in isolation, we should ask whether and to what extent a system enables meaningful, reliable, and predictable interactions with users, bringing user intentions, grounding and human-model interaction dynamics to the focus of evaluation. I will present recent work from my group that illustrates how interaction-oriented evaluation protocols can be implemented in controlled settings, and discuss how LLMs-as-a-judge could play a role in this paradigm." },
-  { time: "16:35", title: "Closing Remarks (16:35–16:50)",              speaker: "Organizing Committee",    type: "talk", filterGroup: "all-only" },
-  { time: "16:50", title: "Poster Session + Social (16:50–17:30)",       speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
+  { time: "16:00", title: "Evaluation in the Face of Deceptively Fluent Models - Moving from Text to Interaction Quality (25 min + 5 min Q&A)", speaker: "Sina Zarrieß", type: "talk", filterGroup: "talks-panel", abstract: "Evaluation has always been a notorious challenge in NLG and NLP research. The rise of LLMs, however, poses even harder problems that are more fundamental than those raised by earlier task-specific systems. Put simply: the texts produced by today's models are extraordinarily fluent. This does not mean they are error-free or fit for every real-world purpose — but their surface polish makes it difficult to detect and diagnose underlying deficiencies, even for trained human evaluators. In this talk, I argue that this situation demands a new evaluation paradigm — one that shifts focus from text quality to interaction quality. Rather than asking how good a generated text is in isolation, we should ask whether and to what extent a system enables meaningful, reliable, and predictable interactions with users, bringing user intentions, grounding and human-model interaction dynamics to the focus of evaluation. I will present recent work from my group that illustrates how interaction-oriented evaluation protocols can be implemented in controlled settings, and discuss how LLMs-as-a-judge could play a role in this paradigm." },
+  { time: "16:30", title: "Invited Talk (30 min)", speaker: "Krzysztof Czarnecki", type: "talk", filterGroup: "talks-panel" },
+  { time: "17:00", title: "Closing Remarks (17:00–17:15)",              speaker: "Organizing Committee",    type: "talk", filterGroup: "all-only" },
+  { time: "17:15", title: "Poster Session + Social (17:15–17:30)",       speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
   { time: "17:30", title: "End of Workshop",                                speaker: null,                      type: "break", filterGroup: "all-only" },
 ];
 

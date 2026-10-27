@@ -103,7 +103,9 @@ function renderSponsors() {
   if (!el) return;
   el.innerHTML = SPONSORS.map(s => `
     <div class="sponsor-card">
-      ${s.url ? `<a href="${s.url}">${s.name}</a>` : s.name}
+      ${s.url
+        ? `<a href="${s.url}">${s.logo ? `<img src="${s.logo}" alt="${s.name}">` : s.name}</a>`
+        : s.logo ? `<img src="${s.logo}" alt="${s.name}">` : s.name}
     </div>`).join('');
 }
 

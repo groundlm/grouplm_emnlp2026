@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GroundLM 2026 — LinkedIn Posters</title>
+<style>
+  :root{--navy:#101d3b;--blue:#203c73;--cyan:#5fe0d0;--coral:#ff806d;--cream:#fffaf0;--ink:#14213a;--muted:#61708a;--line:#dce4ee}
+  *{box-sizing:border-box} body{margin:0;background:#e9edf4;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .toolbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:center;gap:16px;padding:12px;background:#101d3b;color:white;font-size:14px}
+  .toolbar strong{color:var(--cyan)} .toolbar span{opacity:.8}
+  .poster{width:1200px;height:1500px;margin:36px auto;padding:68px 76px;position:relative;overflow:hidden;background:var(--cream);box-shadow:0 18px 55px #14213a24;isolation:isolate}
+  .poster:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 90% 5%,#c4f3eb 0,transparent 28%),radial-gradient(ellipse at 0 100%,#ffe2d9 0,transparent 30%),linear-gradient(135deg,#fffdf7,#f6f8fb)}
+  .poster:after{content:"";position:absolute;z-index:-1;right:-70px;top:-80px;width:430px;height:430px;border:2px solid #5fe0d044;border-radius:50%;box-shadow:0 0 0 28px #5fe0d018,0 0 0 75px #5fe0d00c}
+  .topline{display:flex;align-items:center;justify-content:space-between;color:var(--blue);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:19px}
+  .brand{display:flex;align-items:center;gap:12px}.brandmark{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,var(--cyan),#668cff 65%,var(--coral));transform:rotate(45deg)}
+  .emnlp-lockup{display:flex;align-items:center;justify-content:center;gap:8px;min-width:294px;height:52px;padding:7px 12px;border:1px solid #dce4ee;border-radius:15px;background:#fffffff0}
+  .emnlp-lockup img{display:block;width:190px;height:32px;object-fit:contain}
+  .emnlp-lockup strong{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+  h1{font-size:76px;line-height:1.02;letter-spacing:-.045em;color:var(--navy);margin:50px 0 18px;max-width:950px}
+  .subtitle{font-size:28px;line-height:1.35;color:var(--muted);max-width:890px;margin:0}
+  .rule{height:4px;width:110px;margin:32px 0;background:linear-gradient(90deg,var(--cyan),var(--coral));border-radius:9px}
+  .speaker-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .person{height:190px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px;display:flex;align-items:center;gap:18px;box-shadow:0 6px 18px #10234b0a}
+  .person img{width:138px;height:150px;object-fit:cover;object-position:center 25%;border-radius:14px;background:#dce5ef;flex:none}
+  .person h2{font-size:27px;line-height:1.08;color:var(--navy);margin:0 0 10px;letter-spacing:-.025em}
+  .person p{font-size:18px;line-height:1.25;color:var(--muted);margin:0}
+  .bottom{position:absolute;left:76px;right:76px;bottom:55px;display:flex;justify-content:space-between;align-items:end;border-top:1px solid var(--line);padding-top:19px;color:var(--blue);font-size:20px;font-weight:700}
+  .bottom small{font-size:16px;color:var(--muted);font-weight:500}
+  .panel-card{margin-top:34px;padding:27px 30px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 8px 25px #10234b0a}
+  .panel-card .label{font-size:17px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#168f87;margin-bottom:19px}
+  .panelist{display:grid;grid-template-columns:100px 1fr;gap:20px;align-items:center;padding:16px 0;border-top:1px solid #edf1f6}
+  .panelist:first-of-type{border-top:0;padding-top:0}.panelist img{width:100px;height:100px;object-fit:cover;object-position:center 25%;border-radius:16px;background:#dce5ef}
+  .panelist h2{font-size:30px;line-height:1.08;color:var(--navy);margin:0 0 7px}.panelist p{font-size:20px;color:var(--muted);margin:0}
+  .program-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;align-items:start}
+  .program{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+  .program-heading{padding:10px 14px;background:#edf8f6;color:#168f87;font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .row{display:grid;grid-template-columns:112px 1fr;gap:10px;align-items:center;min-height:54px;padding:8px 12px;border-top:1px solid #edf1f6;font-size:16px;line-height:1.16}
+  .row:first-child{border-top:0}.row:nth-child(odd){background:#f8fafc}.time{font-weight:800;color:#168f87;white-space:nowrap}.event{font-weight:700;color:var(--navy)}.event span{display:block;font-size:13px;font-weight:500;color:var(--muted);margin-top:3px;line-height:1.14}
+  .tag{display:inline-block;margin-left:8px;border-radius:30px;padding:4px 9px;background:#e8f8f5;color:#168f87;font-size:13px;vertical-align:3px;letter-spacing:.04em;text-transform:uppercase}
+  .organizer-line{margin-top:12px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#ffffffb8;color:var(--muted)}
+  .organizer-line strong{display:block;color:var(--blue);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .organizer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px 16px}
+  .organizer{display:flex;align-items:center;gap:9px;min-width:0;color:var(--navy);font-size:14px;font-weight:700;line-height:1.1}
+  .organizer img{width:42px;height:42px;object-fit:cover;object-position:center 25%;border-radius:50%;background:#dce5ef;flex:none}
+  .sponsor-strip{display:flex;align-items:center;gap:16px;margin-top:12px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+  .sponsor-strip strong{color:var(--muted);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+  .sponsor-logo{display:block;width:auto;height:45px;max-width:180px;object-fit:contain}
+  .poster.program-poster{padding:45px 70px}.program-poster h1{font-size:58px;margin:26px 0 10px;line-height:1.0}.program-poster .subtitle{font-size:21px}.program-poster .rule{margin:18px 0}
+  .print-button{position:absolute;top:28px;right:76px;border:0;border-radius:99px;background:var(--navy);color:white;padding:12px 20px;font:700 16px inherit;cursor:pointer}
+  @media(max-width:1250px){.poster{transform-origin:top center;scale:calc((100vw - 24px)/1200);margin:20px auto calc((1500px * ((100vw - 24px)/1200)) - 1500px + 20px)}}
+  @media print{body{background:white}.toolbar,.print-button{display:none!important}.poster{display:none;width:1200px;height:1500px;margin:0;box-shadow:none;transform:none!important;scale:1!important}.poster.printing{display:block;page-break-after:always}@page{size:12in 15in;margin:0}}
+</style>
+</head>
+<body>
+<div class="toolbar"><strong>GroundLM 2026</strong><span>LinkedIn poster set · 1200 × 1500 px · Click “Print poster” to save a single poster as PDF</span></div>
+
+<article class="poster" id="speakers">
+  <button class="print-button" onclick="printPoster('speakers')">Print poster</button>
+  <div class="topline"><div class="brand"><i class="brandmark"></i>GroundLM 2026</div><div class="emnlp-lockup"><img src="img/emnlp_2026_logo_v0.png" alt="EMNLP 2026 Budapest, Hungary"><strong>Budapest</strong></div></div>
+  <h1>Invited<br>Speakers</h1>
+  <p class="subtitle">Meet the researchers joining us to explore grounding, faithfulness, evaluation, and reliable language models.</p>
+  <div class="rule"></div>
+  <div class="speaker-grid">
+    <div class="person"><img src="img/iryna-gurevych.png"><div><h2>Iryna Gurevych</h2><p>Technical University of Darmstadt</p></div></div>
+    <div class="person"><img src="img/danae_photo.jpg"><div><h2>Danae Sánchez Villegas</h2><p>University of Copenhagen</p></div></div>
+    <div class="person"><img src="img/anya-belz.jpg"><div><h2>Anya Belz</h2><p>Dublin City University</p></div></div>
+    <div class="person"><img src="img/valentino-maiorca.jpg"><div><h2>Valentino Maiorca</h2><p>ISTA</p></div></div>
+    <div class="person"><img src="img/lei.jpg"><div><h2>Lei Li</h2><p>Carnegie Mellon University</p></div></div>
+    <div class="person"><img src="img/ivan-titov.gif"><div><h2>Ivan Titov</h2><p>University of Edinburgh</p></div></div>
+    <div class="person"><img src="img/sina-zarriess.jpg"><div><h2>Sina Zarrieß</h2><p>University of Bielefeld</p></div></div>
+    <div class="person"><img src="img/krzysztof.jpg"><div><h2>Krzysztof Czarnecki</h2><p>University of Waterloo</p></div></div>
+  </div>
+  <footer class="bottom"><div>October 29, 2026 <small> · Budapest, Hungary</small></div><small>groundlm.github.io/grouplm_emnlp2026</small></footer>
+</article>
+
+<article class="poster" id="panel">
+  <button class="print-button" onclick="printPoster('panel')">Print poster</button>
+  <div class="topline"><div class="brand"><i class="brandmark"></i>GroundLM 2026</div><div class="emnlp-lockup"><img src="img/emnlp_2026_logo_v0.png" alt="EMNLP 2026 Budapest, Hungary"><strong>Budapest</strong></div></div>
+  <h1>Panel<br>Discussion</h1>
+  <p class="subtitle">Open Challenges in Grounding</p>
+  <div class="rule"></div>
+  <div class="panel-card">
+    <div class="label">Meet the panelists</div>
+    <div class="panelist"><img src="img/amin-shabani.jpg"><div><h2>Amin Shabani</h2><p>RBC Borealis</p></div></div>
+    <div class="panelist"><img src="img/carolin-lawrence.jpg"><div><h2>Carolin Lawrence</h2><p>NEC Laboratories Europe</p></div></div>
+    <div class="panelist"><img src="img/dirk-hovy.jpg"><div><h2>Dirk Hovy</h2><p>Bocconi University</p></div></div>
+    <div class="panelist"><img src="img/krisztian-balog.jpg"><div><h2>Krisztian Balog</h2><p>University of Stavanger · Google DeepMind</p></div></div>
+    <div class="panelist"><img src="img/sina-zarriess.jpg"><div><h2>Sina Zarrieß</h2><p>University of Bielefeld</p></div></div>
+  </div>
+  <footer class="bottom"><div>October 29, 2026 · 15:30–16:00 <small>Budapest time</small></div><small>Budapest, Hungary · EMNLP 2026</small></footer>
+</article>
+
+<article class="poster program-poster" id="workshop">
+  <button class="print-button" onclick="printPoster('workshop')">Print poster</button>
+  <div class="topline"><div class="brand"><i class="brandmark"></i>GroundLM 2026</div><div class="emnlp-lockup"><img src="img/emnlp_2026_logo_v0.png" alt="EMNLP 2026 Budapest, Hungary"><strong>Budapest</strong></div></div>
+  <h1>Grounding Language Models:<br>Learning Faithfully and Efficiently</h1>
+  <p class="subtitle">A full day on grounding, faithfulness, evaluation, and reliable deployment.</p>
+  <div class="rule"></div>
+  <div class="program-grid">
+    <div class="program">
+      <div class="program-heading">Morning · Budapest time</div>
+      <div class="row"><div class="time">8:30</div><div class="event">Opening remarks</div></div>
+      <div class="row"><div class="time">9:00–9:35</div><div class="event">Iryna Gurevych <span>When Grounding Is Not Optional · online</span></div></div>
+      <div class="row"><div class="time">9:35–10:10</div><div class="event">Danae Sánchez Villegas <span>Invited talk</span></div></div>
+      <div class="row"><div class="time">10:10–11:00</div><div class="event">Coffee break + poster session</div></div>
+      <div class="row"><div class="time">11:00–11:35</div><div class="event">Anya Belz <span>Quantified Reproducibility Assessment for NLP/ML</span></div></div>
+      <div class="row"><div class="time">11:35–12:10</div><div class="event">Valentino Maiorca <span>The Semantic Geometry of Activation Steering · online</span></div></div>
+      <div class="row"><div class="time">12:10–13:00</div><div class="event">Lunch + poster session</div></div>
+      <div class="row"><div class="time">13:00–14:00</div><div class="event">Oral presentation session <span>8 papers · in person</span></div></div>
+    </div>
+    <div class="program">
+      <div class="program-heading">Afternoon · Budapest time</div>
+      <div class="row"><div class="time">14:00–14:35</div><div class="event">Lei Li <span>Invited talk</span></div></div>
+      <div class="row"><div class="time">15:00–15:35</div><div class="event">Ivan Titov <span>Invited talk</span></div></div>
+      <div class="row"><div class="time">15:30–16:00</div><div class="event">Panel discussion <span>Open Challenges in Grounding</span></div></div>
+      <div class="row"><div class="time">16:00–16:30</div><div class="event">Sina Zarrieß <span>From Text to Interaction Quality</span></div></div>
+      <div class="row"><div class="time">16:30–17:00</div><div class="event">Krzysztof Czarnecki <span>Invited talk</span></div></div>
+      <div class="row"><div class="time">17:00–17:15</div><div class="event">Closing remarks</div></div>
+      <div class="row"><div class="time">17:15–17:30</div><div class="event">Poster session + social</div></div>
+    </div>
+  </div>
+  <div class="sponsor-strip"><strong>Supported by</strong><img class="sponsor-logo" src="img/tencent-logo.png" alt="Tencent"><img class="sponsor-logo" src="img/rbc-borealis-logo.png" alt="RBC Borealis"></div>
+  <div class="organizer-line">
+    <strong>Workshop Organizers</strong>
+    <div class="organizer-grid">
+      <div class="organizer"><img src="img/yimuwang.jpg" alt="Yimu Wang"><span>Yimu Wang</span></div>
+      <div class="organizer"><img src="img/Kath_pic.jpg" alt="Yee Man Choi"><span>Yee Man Choi</span></div>
+      <div class="organizer"><img src="img/wu.jpg" alt="Di Wu"><span>Di Wu</span></div>
+      <div class="organizer"><img src="img/siqi.jpg" alt="Siqi Ouyang"><span>Siqi Ouyang</span></div>
+      <div class="organizer"><img src="img/mozhgan.jpg" alt="Mozhgan Nasr Azadani"><span>Mozhgan Nasr Azadani</span></div>
+      <div class="organizer"><img src="img/yfung.jpg" alt="Yi R. (May) Fung"><span>Yi R. (May) Fung</span></div>
+    </div>
+  </div>
+  <footer class="bottom"><div>October 29, 2026 · Budapest, Hungary</div><small>See the workshop website for abstracts and updates</small></footer>
+</article>
+
+<script>
+function printPoster(id){document.querySelectorAll('.poster').forEach(p=>p.classList.toggle('printing',p.id===id));window.print();document.querySelectorAll('.poster').forEach(p=>p.classList.remove('printing'));}
+</script>
+</body>
+</html>
