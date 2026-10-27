@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop Overview | GroundLM 2026</title>
+  <meta name="description" content="GroundLM 2026 workshop overview and shared tasks at EMNLP 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="data/config.js"></script>
+</head>
+<body>
+  <div class="ann-bar" id="ann-bar"></div>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <a class="logo-copy" href="index.html#home">
+          <span class="logo-name">GroundLM 2026</span>
+          <span class="logo-sub">EMNLP 2026 · Budapest</span>
+        </a>
+        <a class="logo-mark-link" href="#" data-emnlp-url aria-label="EMNLP 2026 website">
+          <img class="logo-mark" src="img/emnlp_2026_logo_v0.png" alt="EMNLP 2026 Budapest, Hungary logo">
+        </a>
+      </div>
+      <nav id="main-nav">
+        <a href="index.html#home">Home</a>
+        <a href="#glance" class="active">Overview</a>
+        <a href="cfp.html#cfp">CFP</a>
+        <a href="cfp.html#dates">Dates</a>
+        <a href="shared-tasks.html">Shared Tasks</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#venue">Venue</a>
+      </nav>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+  <div class="subpage-hero">
+    <div class="subpage-hero-inner">
+      <div class="hero-badge">GroundLM 2026 · EMNLP 2026</div>
+      <h1>Workshop Overview</h1>
+      <p>Workshop scope, format, and shared-task information.</p>
+    </div>
+  </div>
+  <main class="page-body shared-page">
+    <!-- At a Glance -->
+    <section id="glance">
+      <div class="section-header">
+        <div class="section-label">Overview</div>
+        <h2>At a Glance</h2>
+      </div>
+      <div class="glance-grid">
+        <div class="glance-card">
+          <h3>Why submit?</h3>
+          <ul>
+            <li>Reach a multidisciplinary audience spanning NLP, ML, and IR communities.</li>
+            <li>Choose between direct submission and an ARR commitment fast track.</li>
+            <li>Publish archival proceedings papers or present non-archival work for community discussion.</li>
+            <li>Showcase new benchmarks, datasets, systems, and lessons learned — including negative results.</li>
+          </ul>
+        </div>
+        <div class="glance-card">
+          <h3>Who should submit?</h3>
+          <ul>
+            <li>Students, researchers, and practitioners in NLP, IR, and ML.</li>
+            <li>Work on retrieval-augmented generation, knowledge grounding, factuality, and hallucination.</li>
+            <li>Efficient training, adaptation, and inference methods for grounded LLMs.</li>
+            <li>Evaluation frameworks and benchmarks for grounding and faithfulness.</li>
+          </ul>
+        </div>
+        <div class="glance-card">
+          <h3>Workshop format</h3>
+          <ul>
+            <li>Full-day workshop with invited keynote talks.</li>
+            <li>Panel discussion on open challenges in grounding.</li>
+            <li>Contributed oral presentations and poster session.</li>
+            <li>Student mentoring and networking session.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared Tasks -->
+    <section id="shared-tasks">
+      <div class="section-header">
+        <div class="section-label">Challenges</div>
+        <h2>Shared Tasks</h2>
+      </div>
+      <div class="shared-intro">
+        <p>
+          GroundLM 2026 hosts two shared tasks for evaluating faithful grounding across visual
+          scenes and scientific literature. Public development sets, input-only test sets, and the
+          online evaluator are available now. Participants should register their team on the
+          evaluator Space, submit held-out predictions there, and report official results in the
+          system paper with the same OpenReview <code>teamname</code>.
+        </p>
+      </div>
+      <div class="task-grid">
+        <div class="task-summary-card">
+          <div class="track-kicker">Shared Task 1</div>
+          <h3>GoldenViewVQA</h3>
+          <p>Multi-view visual question answering with evidence-source identification in driving scenes.</p>
+        </div>
+        <div class="task-summary-card">
+          <div class="track-kicker">Shared Task 2</div>
+          <h3>LitTraceQA</h3>
+          <p>Literature-grounded question answering with paper retrieval, evidence grounding, and answer generation.</p>
+        </div>
+      </div>
+      <div class="shared-task-actions">
+        <div class="shared-task-action-row">
+          <a href="#" data-discord-url class="btn btn-light">Discord Q&amp;A</a>
+          <a href="https://huggingface.co/datasets/GoldenViewVQA/GoldenViewVQA" class="btn btn-light">GoldenViewVQA Dataset</a>
+          <a href="https://huggingface.co/datasets/LitTraceQA/LitTraceQA" class="btn btn-light">LitTraceQA Dataset</a>
+        </div>
+        <div class="shared-task-action-row">
+          <a href="https://huggingface.co/spaces/YimuWang/GroundLM-2026-Eval" class="btn btn-primary btn-evaluator">Online Evaluator</a>
+          <a href="shared-tasks.html" class="btn btn-light">View Shared Tasks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-name" style="font-family:'Source Serif 4',serif;">GroundLM 2026</div>
+        <div class="logo-sub" style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;color:#5a6a88;">EMNLP 2026 · Budapest</div>
+        <p>Grounding Language Models: Learning Faithfully and Efficiently.</p>
+        <p style="margin-top:8px;">Contact: <a href="#" data-email style="color:#6a8ab8;text-decoration:none;"></a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="#glance">Workshop Overview</a></li>
+          <li><a href="cfp.html#cfp">Call for Papers</a></li>
+          <li><a href="cfp.html#dates">Paper Submission Dates</a></li>
+          <li><a href="shared-tasks.html">Shared Tasks</a></li>
+          <li><a href="index.html#speakers">Speakers</a></li>
+          <li><a href="index.html#program">Program</a></li>
+          <li><a href="index.html#venue">Venue</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#" data-openreview-url class="is-past-link">Track 1 OpenReview Submission</a></li>
+          <li><a href="#" data-arr-openreview-url>Track 2 ARR Commitment Submission</a></li>
+          <li><a href="#" data-discord-url>Discord Q&amp;A</a></li>
+          <li><a href="#" data-emnlp-url>EMNLP 2026</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GroundLM Workshop Organizers</span>
+      <span>Co-located with <a href="#" data-emnlp-url>EMNLP 2026</a></span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

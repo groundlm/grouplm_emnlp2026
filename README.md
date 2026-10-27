@@ -11,6 +11,10 @@ Open `index.html` in a browser. No build step required.
 ```
 groundlm/
 ├── index.html              ← Main page (assembles everything)
+├── overview.html           ← Workshop overview and shared-task summary
+├── cfp.html                ← Call for Papers and submission timeline
+├── camera-ready.html       ← Camera-ready instructions
+├── shared-tasks.html       ← Shared task information
 │
 ├── data/
 │   └── config.js           ← ⭐ MAIN CONTENT FILE — edit this first

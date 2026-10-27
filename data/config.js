@@ -23,7 +23,7 @@ const SITE = {
 
   hero: {
     date: "October 29, 2026, 8:30-17:30",
-    location: "Budapest, Hungary",
+    location: "Room P2 · Budapest, Hungary",
     description: `A workshop at EMNLP 2026 bringing together researchers working on grounding,
       faithfulness, and efficiency in large language models — from retrieval-augmented generation
       and knowledge grounding to hallucination mitigation and evaluation.`,
@@ -85,6 +85,7 @@ const SPEAKERS = [
     affiliation: "Dublin City University",
     status: "confirmed",
     bio: "Full Professor of Computer Science (Natural Language Processing) at Dublin City University; works on natural language generation, NLP evaluation, text analysis, and image description.",
+    talkTitle: "Quantified Reproducibility Assessment for NLP/ML",
     url: "https://www.dcu.ie/computing/people/anya-belz",
     photo: "img/anya-belz.jpg",
   },
@@ -192,9 +193,9 @@ const ORGANIZERS = [
 const PROGRAM = [
   { time: "8:30",  title: "Opening Remarks",                                speaker: "Organizing Committee",    type: "talk", filterGroup: "all-only" },
   { time: "9:00",  title: "When Grounding Is Not Optional: Lessons from NLP for Mental Health", speaker: "Iryna Gurevych (online)", type: "talk", filterGroup: "talks-panel", abstract: "Language models become fluent long before they become faithful — and in mental health, a system that only sounds grounded can do real harm. Using mental-health NLP as a stress test for grounding, faithfulness, and culture-aware deployment, I show that grounding models in clinical structure is essential; that fluent outputs pass generic automatic judges while failing experts, so faithfulness needs grounded, outcome-anchored evaluation, not surface metrics; and that faithful grounding requires grounded synthetic data. Grounded systems earn trust when they are faithful, verifiable, and culture-aware — not merely convincing." },
-  { time: "9:35",  title: "Invited Talk 2 (30 min + 5 min Q&A)",            speaker: "Danae Sánchez Villegas", type: "talk", filterGroup: "talks-panel" },
+  { time: "9:35",  title: "From Final Answers to Reasoning Traces: Insights and Limitations (30 min + 5 min Q&A)", speaker: "Danae Sánchez Villegas", type: "talk", filterGroup: "talks-panel", abstract: "Multimodal models can reason over images, text, and image sequences, yet evaluating their final answers alone reveals little about how predictions evolve during reasoning and what information influences them. In this talk, I discuss recent work investigating what reasoning traces can reveal about model behavior, as well as their limitations. I first examine how model predictions evolve during chain-of-thought reasoning, including when models commit to an answer and whether reasoning helps correct initial mistakes. I then explore how visual and textual information influence model predictions, and whether reasoning traces faithfully reflect this reliance, raising questions about grounding and faithfulness when models encounter misleading information. I conclude by discussing how moving from static benchmarks toward interactive evaluation could provide a more comprehensive understanding of model behavior and reliability." },
   { time: "10:10", title: "☕ Coffee Break + Poster Session (10:10–11:00)", speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
-  { time: "11:00", title: "Quantified Reproducibility Assessment for NLP/ML", speaker: "Anya Belz", type: "talk", filterGroup: "talks-panel" },
+  { time: "11:00", title: "Quantified Reproducibility Assessment for NLP/ML (30 min + 5 min Q&A)", speaker: "Anya Belz", type: "talk", filterGroup: "talks-panel" },
   { time: "11:35", title: "The Semantic Geometry of Activation Steering", speaker: "Valentino Maiorca (online)", type: "talk", filterGroup: "talks-panel", abstract: "Neural networks often organize their representations semantically, placing related inputs close together and encoding many properties along linear directions. In this talk, I link this emergent geometry directly to activation steering. Steering finds the region of this space that expresses a behavior and pushes activations toward it, at inference time and without touching the weights. In transformer-based models, these regions can be traced to a few attention heads, and to a few directions within each. Concepts have semantic representations too, so the intervention can be predicted from them, and steering toward a new concept takes one forward pass instead of its own optimization. Understanding how a model represents meaning is a direct route to control what it does, and to do so efficiently." },
   { time: "12:10", title: "🍽 Lunch + Poster Session (12:10–13:00)",        speaker: "All accepted papers",     type: "poster", filterGroup: "poster-oral" },
   { time: "13:00", title: "Oral Presentation Session (8 papers; 60 min)",  speaker: "Accepted oral presentations", type: "talk", filterGroup: "poster-oral" },
