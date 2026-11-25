@@ -204,6 +204,9 @@ function renderContactLinks() {
   document.querySelectorAll('[data-reviewer-form-url]').forEach(el => {
     el.href = SITE.reviewerFormUrl;
   });
+  document.querySelectorAll('[data-certificate-url]').forEach(el => {
+    el.href = SITE.certificateUrl;
+  });
 }
 
 /* ── NAV SCROLL HIGHLIGHT ── */
